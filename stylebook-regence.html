@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Regence</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Regence styles -->
+  <link href="http://fnt.webink.com/wfs/webink.css/?project=AEC37CF0-6B2D-450D-9777-5062C06CCACA&fonts=58A3DDEA-1A20-AFB9-54E7-882B2382F4AD:f=ProximaNova-SemiboldIt,5A9479E7-B0E0-2DCD-5F27-F7666DF19C0F:f=ProximaNova-LightIt,F5870F1F-48F5-36F5-550E-B276AA09225A:f=ProximaNova-RegularIt,1366810A-C17C-C074-FF25-E81320293740:f=ProximaNovaCond-Semibold,C344819E-7F64-52D2-5903-DE54F5382845:f=ProximaNova-Semibold,58DEFEBD-4A55-477B-3C13-525C6AEBDD7A:f=ProximaNova-Regular,3CE3758E-9A83-BA6E-300A-ACCFD5D3E584:f=ProximaNova-BoldIt,FF4969BA-A10C-C1F1-4CAE-97A4557D103C:f=ProximaNovaCond-Regular,C88A28DF-0112-63D9-25D2-A4EA08DAF75B:f=ProximaNova-Light,382B4521-6228-4C38-41BC-3DE66C7C910A:f=ProximaNova-Bold" rel="stylesheet" type="text/css"/>
+  <!-- Regence Styles -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style-regence.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/responsive-regence.css">
+  <!-- Asuris Styles
+  <link rel="stylesheet" type="text/css" href="/assets/css/style-asuris.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/responsive-asuris.css">
+   -->
+  <link href="assets/css/prettify.css" type="text/css" rel="stylesheet" />
+  <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/assets/css/lte-ie8.css"><![endif]-->
+
+  <!-- Pre DOM-Ready scripts -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/modernizr.js"></script>
+  <script>
+    if( !window.html5 ){ window.html5 = {}; } window.html5.shivMethods = false;
+  </script>
+  <script type="text/javascript" src="assets/js/dev/extras/mousepress.js"></script>
+  <script type="text/javascript" src="assets/js/dev/polyfiller.js"></script>
+  <script type="text/javascript" src="assets/js/dev/polyfills.js"></script>
+  <script type="text/javascript" src="assets/js/dev/prettify/prettify.js"></script>
+
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+</head>
+
+<body class="styleguide" onload="prettyPrint()">
+
+  <header id="header" style="margin-bottom: 40px;">
+    <div class="container">
+      <div class="brand logo-regence-cs">
+        <a href="http://www.regence.com"><span class="hide-text">Regence, Blue cross, Blue shield of Oregon</span> <span class="brand-region"> BlueCross BlueShield of Oregon</span></a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="article article-left-sidebar row-fluid">
+
+      <div class="span3">
+        <nav>
+          <ul class="nav nav-list nav-styleguide" data-spy="affix" data-offset-bottom="120" data-offset-top="120">
+            <li><a href="#content"><i class="icon-arrow-4" aria-hidden="true"></i> Content</a></li>
+            <li><a href="#identity"><i class="icon-arrow-4" aria-hidden="true"></i> Identity</a></li>
+            <li><a href="#typography"><i class="icon-arrow-4" aria-hidden="true"></i> Typography</a></li>
+            <li><a href="#navigation"><i class="icon-arrow-4" aria-hidden="true"></i> Navigation</a></li>
+            <li><a href="#misc"><i class="icon-arrow-4" aria-hidden="true"></i> Misc</a></li>
+            <li><a href="#icons"><i class="icon-arrow-4" aria-hidden="true"></i> Icons</a></li>
+            <li><a href="#forms"><i class="icon-arrow-4" aria-hidden="true"></i> Forms</a></li>
+            <li><a href="#alerts"><i class="icon-arrow-4" aria-hidden="true"></i> Alerts</a></li>
+            <li><a href="#carousel"><i class="icon-arrow-4" aria-hidden="true"></i> Carousel</a></li>
+            <li><a href="#accordion"><i class="icon-arrow-4" aria-hidden="true"></i> Accordion</a></li>
+            <li><a href="#reveal"><i class="icon-arrow-4" aria-hidden="true"></i> Reveal</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="span9">
+
+        <div class="content main-content">
+
+          <div class="page-header">
+            <h1>Regence Style Guide</h1>
+          </div>
+
+          <section id="content">
+
+            <div class="section-header">
+              <h2>Content Styles</h2>
+            </div>
+
+            <h2>Content</h2>
+            <p>This basic container is used to wrap a variety of content areas and plays an important role in setting correct margins and padding. By itself it only adds a white background.</p>
+            <div class="styleguide-example bg-color-accentLighter">
+              <div class="content">
+                <div class="page-header">
+                  <h1>Example page header <small>Subtext for header</small></h1>
+                </div>
+                <p>Any content can be added to this container.</p>
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class="content"&gt;
+  &lt;div class="page-header"&gt;
+    &lt;h1&gt;Example page header &lt;small&gt;Subtext for header&lt;/small&gt;&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Any content can be added to this container.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+            <h3>Landing Content</h3>
+            <p>The content on landing pages has a white background without any default padding. The content in these section is completely custom and images and carousels are flush against the edges. Padding is instead applied to the .page-header. Other than the page header, only specialized content can be added to this container.</p>
+            <div class="styleguide-example bg-color-accentLighter">
+              <div class="content landing-content">
+                <div class="page-header">
+                  <h1>Example page header <small>Subtext for header</small></h1>
+                </div>
+                <div class="hero-unit hero-inverted hero-image hero-shopping">
+                  <div class="image image-responsive" style="background-image: url(/assets/img/landings/shopper/masthead.jpg)"></div>
+                  <div class="carousel-caption">
+                    <p class="burgundy">Specialized content, mainly hero units, are added to this container.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class="content landing-content"&gt;
+  &lt;div class="page-header"&gt;
+    &lt;h1&gt;Example page header &lt;small&gt;Subtext for header&lt;/small&gt;&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div class="hero-unit hero-inverted hero-image hero-shopping"&gt;
+    &lt;div class="image image-responsive" style="background-image: url(/assets/img/landings/shopper/masthead.jpg)"&gt;&lt;/div&gt;
+    &lt;div class="carousel-caption"&gt;
+      &lt;p class="burgundy"&gt;Specialized content, mainly hero units, are added to this container.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+            <h3>Main Content</h3>
+            <p>Our main content div is used on most articles and has padding to improve legibility. This style is dependent on whether the article has a left or right sidebar, adding negative margins and borders depending on the parent class.</p>
+            <div class="styleguide-example bg-color-accentLighter">
+              <div class="content main-content">
+                <div class="page-header">
+                  <h1>Example page header <small>Subtext for header</small></h1>
+                </div>
+                <p>Any content can be added to this container.</p>
+              </div>              
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class="content main-content"&gt;
+  &lt;div class="page-header"&gt;
+    &lt;h1&gt;Example page header &lt;small&gt;Subtext for header&lt;/small&gt;&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Any content can be added to this container.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+            <h3>Sidebar Content</h3>
+            <p>The sidebar content div is meant to be used in the right rail. It has a clear background and less padding than the main content.</p>
+            <div class="styleguide-example bg-color-accentLighter">
+              <aside class="sidebar">
+                <div class="content sidebar-content">
+                  <address>
+                  <b>Regence Corporate</b><br />
+                  PO Box 1071<br />
+                  Portland OR 97217
+                  </address>
+                </div>
+              </aside>
+            </div>
+<pre class="prettyprint linenums">
+&lt;aside class="sidebar"&gt;
+  &lt;div class="content sidebar-content"&gt;
+    &lt;address&gt;
+      &lt;b&gt;Regence Corporate&lt;/b&gt;&lt;br /&gt;
+      PO Box 1071&lt;br /&gt;
+      Portland OR 97217
+    &lt;/address&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</pre>
+          </section>
+
+          <section id="identity">
+
+            <div class="section-header">
+              <h2>Identity Styles</h2>
+            </div>
+
+            <h3>Logos</h3>
+            <p>Logos are placed using a class name. There are three images for each logo, standard resolution, high resolution, and SVG. Modernizr classes determine which image is served.</p>
+            <table class="table table-expanded">
+              <tbody>
+                <tr>
+                  <th>Logo</th>
+                  <th>Name</th>
+                  <th>Class</th>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="brand logo-regence-cs">
+                      <a href="http://www.regence.com"><span class="hide-text">Regence, Blue cross, Blue shield</span></a>
+                    </span>
+                  </td>
+                  <td>Regence BlueCross BlueShield</td>
+                  <td><code>.logo-regence-cs</code></td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="brand logo-regence-s">
+                      <a href="http://www.regence.com"><span class="hide-text">Regence, Blue shield</span></a>
+                    </span>
+                  </td>
+                  <td>Regence BlueShield</td>
+                  <td><code>.logo-regence-s</code></td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="brand logo-myregence">
+                      <a href="http://www.myregence.com"><span class="hide-text">My Regence</span></a>
+                    </span>
+                  </td>
+                  <td>My Regence</td>
+                  <td><code>.logo-myregence</code></td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="brand logo-asuris">
+                      <a href="http://www.asuris.com"><span class="hide-text">Asuris</span></a>
+                    </span>
+                  </td>
+                  <td>Asuris</td>
+                  <td><code>.logo-asuris</code></td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="brand logo-myasuris">
+                      <a href="http://www.myasuris.com"><span class="hide-text">My Asuris</span></a>
+                    </span>
+                  </td>
+                  <td>My Asuris</td>
+                  <td><code>.logo-myasuris</code></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Colors</h3>
+            <div class="row-fluid">
+              <h4>Brand Accent Colors</h4>
+              <table class="table table-expanded">
+                <tbody>
+                  <tr>
+                    <th>Color</th>
+                    <th>Name</th>
+                    <th>Hex</th>
+                    <th>RGB</th>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-brand">&nbsp;</td>
+                    <td>Brand</td>
+                    <td><code>#0881C2;</code></td>
+                    <td><code>8,129,194</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-accent">&nbsp;</td>
+                    <td>Accent</td>
+                    <td><code>#599ABD;</code></td>
+                    <td><code>89,154,189</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-accentDark">&nbsp;</td>
+                    <td>Accent Dark</td>
+                    <td><code>#397290;</code></td>
+                    <td><code>57,114,144</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-accentDarker">&nbsp;</td>
+                    <td>Accent Darker</td>
+                    <td><code>#244759;</code></td>
+                    <td><code>36,71,89</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-accentDarkest">&nbsp;</td>
+                    <td>Accent Darkest</td>
+                    <td><code>#152A35;</code></td>
+                    <td><code>21,42,53</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-accentLight">&nbsp;</td>
+                    <td>Accent Light</td>
+                    <td><code>#90BBD3;</code></td>
+                    <td><code>144,187,211</code></td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#7D99A8">&nbsp;</td>
+                    <td>Sidebar Heading</td>
+                    <td><code>#7D99A8;</code></td>
+                    <td><code>144,187,211</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-accentLighter">&nbsp;</td>
+                    <td>Accent Lighter</td>
+                    <td><code>#C6DDE9;</code></td>
+                    <td><code>198,221,233</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-accentLightest">&nbsp;</td>
+                    <td>Accent Lightest</td>
+                    <td><code>#EBF3F7;</code></td>
+                    <td><code>235,243,247</code></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>Unbranded Colors</h4>
+              <table class="table table-expanded">
+                <tbody>
+                  <tr>
+                    <th>Color</th>
+                    <th>Name</th>
+                    <th>Hex</th>
+                    <th>RGB</th>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-blue">&nbsp;</td>
+                    <td>Blue</td>
+                    <td><code>#0881C2;</code></td>
+                    <td><code>8,129,194</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-green">&nbsp;</td>
+                    <td>Green</td>
+                    <td><code>#1E9442;</code></td>
+                    <td><code>30,148,66</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-red">&nbsp;</td>
+                    <td>Red</td>
+                    <td><code>#9D261D;</code></td>
+                    <td><code>157,38,29</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-yellow">&nbsp;</td>
+                    <td>Yellow</td>
+                    <td><code>#FFC40D;</code></td>
+                    <td><code>255,196,13</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-orange">&nbsp;</td>
+                    <td>Orange</td>
+                    <td><code>#CA5400;</code></td>
+                    <td><code>202,84,0</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-pink">&nbsp;</td>
+                    <td>Pink</td>
+                    <td><code>#C3325F;</code></td>
+                    <td><code>195,50,95</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-purple">&nbsp;</td>
+                    <td>Purple</td>
+                    <td><code>#916DBD;</code></td>
+                    <td><code>145,109,189</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg-color-burgundy">&nbsp;</td>
+                    <td>Burgundy</td>
+                    <td><code>#791321;</code></td>
+                    <td><code>121,19,33</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Web Fonts</h3>
+            <p>If the font name is green, then web fonts are supported. If not, then web fonts aren't supported by the browser.</p>
+            <table class="table table-expanded">
+              <tbody>
+                <tr>
+                  <th>Sample</th>
+                  <th>Name</th>
+                  <th>Fallbacks</th>
+                </tr>
+                <tr>
+                  <td class="fontfamily-sans">Dwarf mobs quiz lynx.jpg, kvetch!</td>
+                  <td class="fontface">Proxima Nova Regular</td>
+                  <td class="no-fontface"><code>"ProximaNova-Regular", Verdana, sans-serif;</code></td>
+                </tr>
+                <tr>
+                  <td class="fontfamily-sansLight">Dwarf mobs quiz lynx.jpg, kvetch!</td>
+                  <td class="fontface">Proxima Nova Light</td>
+                  <td class="no-fontface"><code>"ProximaNova-Light", Verdana, Arial, Helvetica, sans-serif;</code></td>
+                </tr>
+                <tr>
+                  <td class="fontfamily-sansSemibold">Dwarf mobs quiz lynx.jpg, kvetch!</td>
+                  <td class="fontface">Proxima Nova Semibold</td>
+                  <td class="no-fontface"><code>"ProximaNova-Semibold", Verdana, Arial, Helvetica, sans-serif;</code></td>
+                </tr>
+                <tr>
+                  <td class="fontfamily-sansBold">Dwarf mobs quiz lynx.jpg, kvetch!</td>
+                  <td class="fontface">Proxima Nova Bold</td>
+                  <td class="no-fontface"><code>"ProximaNova-Bold", Verdana, Arial, Helvetica, sans-serif;</code></td>
+                </tr>
+                <tr>
+                  <td class="fontfamily-sansCond">Dwarf mobs quiz lynx.jpg, kvetch!</td>
+                  <td class="fontface">Proxima Nova Condensed</td>
+                  <td class="no-fontface"><code>"ProximaNovaCond-Regular", Verdana, Arial, Helvetica, sans-serif;</code></td>
+                </tr>
+                <tr>
+                  <td class="fontfamily-serif">Dwarf mobs quiz lynx.jpg, kvetch!</td>
+                  <td class="fontface">Georgia</td>
+                  <td class="no-fontface"><code>Georgia, "Times New Roman", Times, serif;</code></td>
+                </tr>
+                <tr>
+                  <td class="fontfamily-mono">Dwarf mobs quiz lynx.jpg, kvetch!</td>
+                  <td class="fontface">Monaco</td>
+                  <td class="no-fontface"><code>Monaco, Menlo, Consolas, "Courier New", monospace;</code></td>
+                </tr>
+                <tr>
+                  <td class="fontfamily-script">Dwarf mobs quiz lynx.jpg, kvetch!</td>
+                  <td class="fontface">Nina Web Medium</td>
+                  <td class="no-fontface"><code>'NinaWebMedium', 'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', 'Marker Felt', 'Purisa', 'URW Chancery L', cursive;</code></td>
+                </tr>
+                <tr>
+                  <td class="fontfamily-scriptBold">Dwarf mobs quiz lynx.jpg, kvetch!</td>
+                  <td class="fontface">NinaWeb-Bold</td>
+                  <td class="no-fontface"><code>'NinaWeb-Bold', 'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', 'Marker Felt', 'Purisa', 'URW Chancery L', cursive;</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="typography">
+
+            <div class="section-header">
+              <h2>Typography</h2>
+            </div>
+
+            <h3>Headings</h3>
+            <div class="styleguide-example">
+              <h1>h1. Heading 1</h1>
+              <h2>h2. Heading 2</h2>
+              <h3>h3. Heading 3</h3>
+              <h4>h4. Heading 4</h4>
+              <h5>h5. Heading 5</h5>
+              <h6>h6. Heading 6</h6>
+            </div>
+
+            <h3>Links</h3>
+
+            <h4>Standard Links</h4>
+            <p>Links to local pages and resources.</p>
+            <div class="styleguide-example">
+              <p><a href="#">I'm a local link</a></p>
+            </div>
+
+            <h4>External Links</h4>
+            <p>Links to external pages and resources. Add <code>.external</code> to your link to get the external icon and to open a new window when the link is clicked.</p>
+            <div class="styleguide-example">
+              <p><a class="external">I'm an external link</a></p>
+            </div>
+            <pre class="prettyprint">&lt;a class=&quot;external&quot;&gt;...&lt;/a&gt;</pre>
+
+            <h3>Lead body copy</h3>
+            <p>Make a paragraph stand out by adding <code>.lead</code>.</p>
+            <div class="styleguide-example">
+              <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+            </div>
+<pre class="prettyprint"><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"lead"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/p&gt;</span></pre>
+
+            <!-- Lists -->
+            <h2 id="lists">Lists</h2>
+
+            <h3>Unordered</h3>
+            <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+            <div class="styleguide-example">
+              <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Integer molestie lorem at massa</li>
+                <li>Facilisis in pretium nisl aliquet</li>
+                <li>Nulla volutpat aliquam velit
+                  <ul>
+                    <li>Phasellus iaculis neque</li>
+                    <li>Purus sodales ultricies</li>
+                    <li>Vestibulum laoreet porttitor sem</li>
+                    <li>Ac tristique libero volutpat at</li>
+                  </ul>
+                </li>
+                <li>Faucibus porta lacus fringilla vel</li>
+                <li>Aenean sit amet erat nunc</li>
+                <li>Eget porttitor lorem</li>
+              </ul>
+            </div>
+<pre class="prettyprint linenums">
+&lt;ul&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+            <h3>Ordered</h3>
+            <p>A list of items in which the order <em>does</em> explicitly matter.</p>
+            <div class="styleguide-example">
+              <ol>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Integer molestie lorem at massa</li>
+                <li>Facilisis in pretium nisl aliquet</li>
+                <li>Nulla volutpat aliquam velit</li>
+                <li>Faucibus porta lacus fringilla vel</li>
+                <li>Aenean sit amet erat nunc</li>
+                <li>Eget porttitor lorem</li>
+              </ol>
+            </div>
+<pre class="prettyprint linenums">
+&lt;ol&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+            <h3>Unstyled</h3>
+            <p>A list of items with no <code>list-style</code> or additional left padding.</p>
+            <div class="styleguide-example">
+              <ul class="unstyled">
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Integer molestie lorem at massa</li>
+                <li>Facilisis in pretium nisl aliquet</li>
+                <li>Nulla volutpat aliquam velit
+                  <ul>
+                    <li>Phasellus iaculis neque</li>
+                    <li>Purus sodales ultricies</li>
+                    <li>Vestibulum laoreet porttitor sem</li>
+                    <li>Ac tristique libero volutpat at</li>
+                  </ul>
+                </li>
+                <li>Faucibus porta lacus fringilla vel</li>
+                <li>Aenean sit amet erat nunc</li>
+                <li>Eget porttitor lorem</li>
+              </ul>
+            </div>
+<pre class="prettyprint linenums">
+&lt;ul class="unstyled"&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+            <h3>Bulleted</h3>
+            <p>A list of items with brand specific bullets.</p>
+            <div class="styleguide-example">
+              <ul class="bulleted">
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Integer molestie lorem at massa</li>
+                <li>Facilisis in pretium nisl aliquet</li>
+                <li>Nulla volutpat aliquam velit
+                  <ul>
+                    <li>Phasellus iaculis neque</li>
+                    <li>Purus sodales ultricies</li>
+                    <li>Vestibulum laoreet porttitor sem</li>
+                    <li>Ac tristique libero volutpat at</li>
+                  </ul>
+                </li>
+                <li>Faucibus porta lacus fringilla vel</li>
+                <li>Aenean sit amet erat nunc</li>
+                <li>Eget porttitor lorem</li>
+              </ul>
+            </div>
+<pre class="prettyprint linenums">
+&lt;ul class="bulleted"&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+            <h3>Description</h3>
+            <p>A list of terms with their associated descriptions.</p>
+            <div class="styleguide-example">
+              <dl>
+                <dt>Description lists</dt>
+                <dd>A description list is perfect for defining terms.</dd>
+                <dt>Euismod</dt>
+                <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                <dt>Malesuada porta</dt>
+                <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+              </dl>
+            </div>
+<pre class="prettyprint linenums">
+&lt;dl&gt;
+  &lt;dt&gt;...&lt;/dt&gt;
+  &lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+
+            <h4>Horizontal description</h4>
+            <p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side.</p>
+            <div class="styleguide-example">
+              <dl class="dl-horizontal">
+                <dt>Description lists</dt>
+                <dd>A description list is perfect for defining terms.</dd>
+                <dt>Euismod</dt>
+                <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                <dt>Malesuada porta</dt>
+                <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                <dt>Felis euismod semper eget lacinia</dt>
+                <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+              </dl>
+            </div>
+<pre class="prettyprint linenums">
+&lt;dl class="dl-horizontal"&gt;
+  &lt;dt&gt;...&lt;/dt&gt;
+  &lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+            <p>
+              <span class="label label-info">Heads up!</span>
+              Horizontal description lists will truncate terms that are too long to fit in the left column fix <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.
+            </p>
+
+            <!-- Navigation -->
+            <h2 id="navigation">Navigation</h2>
+
+            <h3>Treeview</h3>
+            <div class="styleguide-example">
+              <div class="nav-treeview">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="1">
+                    <label class="branch" for="1">Pages</label>
+                    <ul>
+                      <li>
+                        <label><a href="#href">Page Link</a></label>
+                      </li>
+                      <li>
+                        <label><a href="#href">Page Link</a></label>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <label><a href="#href">Page Link</a></label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class="nav-treeview"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;input type="checkbox" id="1"&gt;
+      &lt;label class="branch" for="1"&gt;Pages&lt;/label&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;label&gt;&lt;a href="#href"&gt;Page Link&lt;/a&gt;&lt;/label&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;label&gt;&lt;a href="#href"&gt;Page Link&lt;/a&gt;&lt;/label&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label&gt;&lt;a href="#href"&gt;Page Link&lt;/a&gt;&lt;/label&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+            <!-- Misc -->
+            <h2 id="misc">Misc</h2>
+
+            <h3>Wells</h3>
+            <p>Use the well as a simple effect on an element to give it an inset effect.</p>
+            <div class="styleguide-example">
+              <div class="well">
+                Look, I'm in a well!
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class="well"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+            <h4>Optional classes</h4>
+            <p>Control padding and rounded corners with two optional modifier classes.</p>
+            <div class="styleguide-example">
+              <div class="well well-large">
+                <h2>Lassie, go get help</h2>
+                <p>I'm stuck in a well!</p>
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class="well well-large"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+            <div class="styleguide-example">
+              <div class="well well-small">
+                Look, I'm in a well!
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class="well well-small"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+            <p class="lead">Visit <a class="external" href="http://twitter.github.com/bootstrap/base-css.html#typography">Twitter Bootstrap</a> for more detailed typography information</p>
+
+          </section>
+
+          <section id="icons">
+
+            <div class="section-header">
+              <h2>Icons</h2>
+            </div>
+
+            <h3>glyph-sample-sample Codes</h3>
+            <div class="row-fluid">
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#x26;"></div>
+                <input type="text" readonly="readonly" value="&amp;#x26;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#x29;"></div>
+                <input type="text" readonly="readonly" value="&amp;#x29;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#x2a;"></div>
+                <input type="text" readonly="readonly" value="&amp;#x2a;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#x75;"></div>
+                <input type="text" readonly="readonly" value="&amp;#x75;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#x6b;"></div>
+                <input type="text" readonly="readonly" value="&amp;#x6b;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#x7a;"></div>
+                <input type="text" readonly="readonly" value="&amp;#x7a;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#x27;"></div>
+                <input type="text" readonly="readonly" value="&amp;#x27;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#x30;"></div>
+                <input type="text" readonly="readonly" value="&amp;#x30;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#x31;"></div>
+                <input type="text" readonly="readonly" value="&amp;#x31;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#x32;"></div>
+                <input type="text" readonly="readonly" value="&amp;#x32;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#x72;"></div>
+                <input type="text" readonly="readonly" value="&amp;#x72;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#x21;"></div>
+                <input type="text" readonly="readonly" value="&amp;#x21;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#x70;"></div>
+                <input type="text" readonly="readonly" value="&amp;#x70;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#x69;"></div>
+                <input type="text" readonly="readonly" value="&amp;#x69;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#xf07b;"></div>
+                <input type="text" readonly="readonly" value="&amp;#xf07b;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#xf07c;"></div>
+                <input type="text" readonly="readonly" value="&amp;#xf07c;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#xf00c;"></div>
+                <input type="text" readonly="readonly" value="&amp;#xf00c;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#xf00d;"></div>
+                <input type="text" readonly="readonly" value="&amp;#xf00d;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#xf0c1;"></div>
+                <input type="text" readonly="readonly" value="&amp;#xf0c1;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#xe000;"></div>
+                <input type="text" readonly="readonly" value="&amp;#xe000;" />
+              </div>
+              <div class="glyph-sample">
+                <div class="fs1" aria-hidden="true" data-icon="&#xe001;"></div>
+                <input type="text" readonly="readonly" value="&amp;#xe001;" />
+              </div>
+            </div>
+
+            <div class="styleguide-example">
+              <p>Give us a call at <span aria-hidden="true" data-icon="&#x27;"></span>&nbsp;(503) 555-1234</p>
+            </div>
+<pre class="prettyprint linenums">
+&lt;p&gt;Give us a call at &lt;span aria-hidden="true" data-icon="&amp;#x27;"&gt;&lt;/span&gt;&nbsp;(503) 555-1234&lt;/p&gt;
+</pre>
+
+            <h3>glyph-sample-sample CSS Class Names</h3>
+            <div class="row-fluid">
+              <span class="box1">
+                <span aria-hidden="true" class="icon-email"></span>
+                &nbsp;icon-email
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-search"></span>
+                &nbsp;icon-search
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-users"></span>
+                &nbsp;icon-users
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-United-States"></span>
+                &nbsp;icon-United-States
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-Washington"></span>
+                &nbsp;icon-Washington
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-Utah"></span>
+                &nbsp;icon-Utah
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-phone"></span>
+                &nbsp;icon-phone
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-information"></span>
+                &nbsp;icon-information
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-success"></span>
+                &nbsp;icon-success
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-warning"></span>
+                &nbsp;icon-warning
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-Oregon"></span>
+                &nbsp;icon-Oregon
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-lightning"></span>
+                &nbsp;icon-lightning
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-pointer"></span>
+                &nbsp;icon-pointer
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-user-info"></span>
+                &nbsp;icon-user-info
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-folder-closed"></span>
+                &nbsp;icon-folder-closed
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-folder-open"></span>
+                &nbsp;icon-folder-open
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-checked"></span>
+                &nbsp;icon-checked
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-close"></span>
+                &nbsp;icon-close
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-linked"></span>
+                &nbsp;icon-linked
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-play"></span>
+                &nbsp;icon-play
+              </span>
+              <span class="box1">
+                <span aria-hidden="true" class="icon-new-tab"></span>
+                &nbsp;icon-new-tab
+              </span>
+            </div>
+            <div class="styleguide-example">
+              <h1><span aria-hidden="true" class="icon-Oregon"></span> Oregon Office Locations</span></h1>
+            </div>
+<pre class="prettyprint linenums">
+&lt;h1&gt;&lt;span aria-hidden="true" class="icon-Oregon"&gt;&lt;/span&gt;&nbsp;Oregon Office Locations&lt;/span&gt;&lt;/h1&gt;
+</pre>
+
+          </section>
+
+          <section id="forms">
+
+            <div class="section-header">
+              <h2>Forms</h2>
+            </div>
+
+            <h3>Default form</h3>
+            <p>Individual form controls receive styling, but without any required base class on the <code>&lt;form&gt;</code>or large changes in markup. Results in stacked, left-aligned labels on top of form controls.</p>
+            <form class="styleguide-example">
+              <legend>Legend</legend>
+              <label>Label name</label>
+              <input type="text" placeholder="Type something…">
+              <span class="help-block">Example block-level help text here.</span>
+              <label class="checkbox">
+                <input type="checkbox"> Check me out
+              </label>
+              <button class="btn" type="submit">Submit</button>
+            </form>
+<pre class="prettyprint linenums">
+&lt;form&gt;
+  &lt;legend&gt;Legend&lt;/legend&gt;
+  &lt;label&gt;Label name&lt;/label&gt;
+  &lt;input type="text" placeholder="Type something…"&gt;
+  &lt;span class="help-block"&gt;Example block-level help text here.&lt;/span&gt;
+  &lt;label class="checkbox"&gt;
+    &lt;input type="checkbox"&gt; Check me out
+  &lt;/label&gt;
+  &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+
+            <h3>Horizontal form</h3>
+            <p>Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:</p>
+            <ul>
+              <li>Add <code>.form-horizontal</code> to the form</li>
+              <li>Wrap labels and controls in <code>.control-group</code></li>
+              <li>Add <code>.control-label</code> to the label</li>
+              <li>Wrap any associated controls in <code>.controls</code> for proper alignment</li>
+            </ul>
+            <form class="form-horizontal styleguide-example">
+              <legend>Legend</legend>
+              <div class="control-group">
+                <label for="inputEmail" class="control-label">Email</label>
+                <div class="controls">
+                  <input type="text" placeholder="Email" id="inputEmail">
+                </div>
+              </div>
+              <div class="control-group">
+                <label for="inputPassword" class="control-label">Password</label>
+                <div class="controls">
+                  <input type="password" placeholder="Password" id="inputPassword">
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="controls">
+                  <label class="checkbox">
+                    <input type="checkbox"> Remember me
+                  </label>
+                  <button class="btn" type="submit">Sign in</button>
+                </div>
+              </div>
+            </form>
+<pre class="prettyprint linenums">
+&lt;form class="form-horizontal"&gt;
+  &lt;legend&gt;Legend&lt;/legend&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="control-label" for="inputEmail"&gt;Email&lt;/label&gt;
+    &lt;div class="controls"&gt;
+      &lt;input type="text" id="inputEmail" placeholder="Email"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="control-label" for="inputPassword"&gt;Password&lt;/label&gt;
+    &lt;div class="controls"&gt;
+      &lt;input type="password" id="inputPassword" placeholder="Password"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="control-group"&gt;
+    &lt;div class="controls"&gt;
+      &lt;label class="checkbox"&gt;
+        &lt;input type="checkbox"&gt; Remember me
+      &lt;/label&gt;
+      &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
+            <h3>Checkboxes and radios</h3>
+            <p>Checkboxes are for selecting one or several options in a list while radios are for selecting one option from many.</p>
+            <h4>Default (stacked)</h4>
+            <div class="styleguide-example">
+              <form class="form-horizontal">
+                <label class="checkbox">
+                  <input type="checkbox" value="">
+                  Option one is this and that—be sure to include why it's great
+                </label>
+                <br>
+                <label class="radio">
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  Option one is this and that—be sure to include why it's great
+                </label>
+                <label class="radio">
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  Option two can be something else and selecting it will deselect option one
+                </label>
+              </form>
+            </div>
+<pre class="prettyprint linenums">
+&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox" value=""&gt;
+  Option one is this and that&mdash;be sure to include why it's great
+&lt;/label&gt;
+
+&lt;label class="radio"&gt;
+  &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+  Option one is this and that&mdash;be sure to include why it's great
+&lt;/label&gt;
+&lt;label class="radio"&gt;
+  &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+  Option two can be something else and selecting it will deselect option one
+&lt;/label&gt;
+</pre>
+
+            <h3>Selects</h3>
+            <p>Use the default option or specify a <code>multiple="multiple"</code> to show multiple options at once.</p>
+            <form class="styleguide-example">
+              <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <br>
+              <select multiple="multiple">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </form>
+<pre class="prettyprint linenums">
+&lt;select&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;select multiple="multiple"&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+            <h3>Form Sizing</h3>  
+            <form style="padding-bottom: 15px;" class="styleguide-example">
+              <div class="controls docs-input-sizes">
+                <input type="text" placeholder=".input-mini" class="input-mini">
+                <input type="text" placeholder=".input-small" class="input-small">
+                <input type="text" placeholder=".input-medium" class="input-medium">
+                <input type="text" placeholder=".input-large" class="input-large">
+                <input type="text" placeholder=".input-xlarge" class="input-xlarge">
+                <input type="text" placeholder=".input-xxlarge" class="input-xxlarge">
+                <input class="span1" type="text" placeholder=".span1">
+                <input class="span2" type="text" placeholder=".span2">
+                <input class="span3" type="text" placeholder=".span3">
+                <select class="span1">
+                  ...
+                </select>
+                <select class="span2">
+                  ...
+                </select>
+                <select class="span3">
+                  ...
+                </select>
+              </div>
+            </form>
+<pre class="prettyprint linenums">
+&lt;input class="input-mini" type="text" placeholder=".input-mini"&gt;
+&lt;input class="input-small" type="text" placeholder=".input-small"&gt;
+&lt;input class="input-medium" type="text" placeholder=".input-medium"&gt;
+&lt;input class="input-large" type="text" placeholder=".input-large"&gt;
+&lt;input class="input-xlarge" type="text" placeholder=".input-xlarge"&gt;
+&lt;input class="input-xxlarge" type="text" placeholder=".input-xxlarge"&gt;
+&lt;input class="span1" type="text" placeholder=".span1"&gt;
+&lt;input class="span2" type="text" placeholder=".span2"&gt;
+&lt;input class="span3" type="text" placeholder=".span3"&gt;
+&lt;select class="span1"&gt;
+  ...
+&lt;/select&gt;
+&lt;select class="span2"&gt;
+  ...
+&lt;/select&gt;
+&lt;select class="span3"&gt;
+  ...
+&lt;/select&gt;
+</pre>
+
+            <h3>Form Validation</h3>
+            <div class="styleguide-example">
+              <fieldset>
+                <legend>outside of form but associated to the form using form-attribute</legend>                
+                <label for="email">E-Mail + datalist: <dfn title="required">*</dfn></label>
+                <input list="datalist" name="email" required="required" type="email" id="email" form="form" class="form-ui-invalid">
+                <datalist id="datalist">
+                  <select>
+                    <option value="yourmail@gmail.com"></option>
+                    <option value="yourmail@yahoo.com"></option>
+                    <option value="mail@some-example-domain.com"></option>
+                    <option value="foo@bar.baz"></option>
+                  </select>
+                </datalist>
+                <label for="date">date: *</label>
+                <input class="datepicker" name="date" data-placeholder="year-month-day" type="date" id="date" required="" form="form">
+                <label for="fromDate">from</label>
+                <input type="date" id="fromDate" />
+                <label for="toDate">to</label>
+                <input type="date" id="toDate" />
+                <label for="checkbox">
+                  <input type="checkbox" required="" id="checkbox" name="checkbox" form="form"> required checkbox*
+                </label>
+                <button class="btn" form="form" type="submit">Send</button>
+              </fieldset>
+            </div>
+<pre class="prettyprint linenums">&lt;fieldset&gt;
+  &lt;legend&gt;outside of form but associated to the form using form-attribute&lt;/legend&gt;
+  &lt;label for=&quot;email&quot;&gt;E-Mail + datalist: &lt;dfn title=&quot;required&quot;&gt;*&lt;/dfn&gt;&lt;/label&gt;
+  &lt;input list=&quot;datalist&quot; name=&quot;email&quot; required=&quot;required&quot; type=&quot;email&quot; id=&quot;email&quot; form=&quot;form&quot; class=&quot;form-ui-invalid&quot;&gt;
+  &lt;datalist id=&quot;datalist&quot;&gt;
+    &lt;select&gt;
+      &lt;option value=&quot;yourmail@gmail.com&quot;&gt;&lt;/option&gt;
+      &lt;option value=&quot;yourmail@yahoo.com&quot;&gt;&lt;/option&gt;
+      &lt;option value=&quot;mail@some-example-domain.com&quot;&gt;&lt;/option&gt;
+      &lt;option value=&quot;foo@bar.baz&quot;&gt;&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/datalist&gt;
+  &lt;label for=&quot;date&quot;&gt;date: *&lt;/label&gt;
+  &lt;input class=&quot;datepicker&quot; name=&quot;date&quot; data-placeholder=&quot;year-month-day&quot; type=&quot;date&quot; id=&quot;date&quot; required=&quot;&quot; form=&quot;form&quot;&gt;
+  &lt;label for=&quot;fromDate&quot;&gt;from&lt;/label&gt;
+  &lt;input type=&quot;date&quot; id=&quot;fromDate&quot; /&gt;
+  &lt;label for=&quot;toDate&quot;&gt;to&lt;/label&gt;
+  &lt;input type=&quot;date&quot; id=&quot;toDate&quot; /&gt;
+  &lt;label for=&quot;checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; required=&quot;&quot; id=&quot;checkbox&quot; name=&quot;checkbox&quot; form=&quot;form&quot;&amp;gt; required checkbox*
+  &lt;/label&gt;
+  &lt;button class=&quot;btn&quot; form=&quot;form&quot; type=&quot;submit&quot;&gt;Send&lt;/button&gt;
+&lt;/fieldset&gt;</pre>
+
+            <form action="#" class="styleguide-example" id="form" _lpchecked="1">
+              <p class="required"><span>*</span> Required fields</p>
+              <fieldset>
+                <label for="number">number: <dfn title="required">*</dfn></label>
+                <input name="number" required="required" type="number" id="number" form="form">
+                <label for="range">range:</label>
+                <input name="range" type="range" id="range">                          
+                <label for="password">password:</label>
+                <input placeholder="password" name="password" type="password" id="password">                    
+                <label for="textarea">textarea: * ([maxlength="6"])</label>
+                <textarea placeholder="hello this is a textbox" maxlength="6" required="required" name="textarea" id="textarea"></textarea>
+                <label for="select">select: *</label>
+                <select required="required" name="select" id="select">
+                  <option value="">Please choose</option>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>                    
+                <label for="number2">number + number = output:</label>
+                <input step="0.5" value="0" name="number2" type="number" id="number2">
+                <input name="number3" id="number3" value="0" type="number">
+                <output id="output2"></output>                      
+                <script>
+                  $('#number2').bind('input', function(){
+                    $('#output2').prop( 'value', ($(this).prop('valueAsNumber') || 0) + ($('#number3').prop('valueAsNumber') || 0) );
+                  });                      
+                  $('#number3').bind('input', function(){
+                    $('#output2').prop( 'value', ($(this).prop('valueAsNumber') || 0) + ($('#number2').prop('valueAsNumber') || 0) );
+                  });
+                </script>
+              </fieldset>                
+              <h3>Radio-Group Headline Short Labels  <dfn title="required">*</dfn></h3>
+              <fieldset class="mod">
+                <legend>Legend Short Labels  <dfn title="required">*</dfn></legend>                    
+                <label for="field6-1">
+                  <input type="radio" id="field6-1" name="radio-grp1-1" required="">
+                  Radiooption 2
+                </label>                      
+                <label for="field7-1">
+                  <input type="radio" id="field7-1" name="radio-grp1-1">
+                  Radiooption 2
+                </label>                    
+                <label for="field8-1">
+                  <input type="radio" id="field8-1" name="radio-grp1-1">
+                  Radiooption 3
+                </label>
+              </fieldset>
+              <button type="submit" class="btn">Send</button>
+            </form>
+<pre class="prettyprint linenums">&lt;p class=&quot;required&quot;&gt;&lt;span&gt;*&lt;/span&gt; Required fields&lt;/p&gt;
+&lt;fieldset&gt;
+  &lt;label for=&quot;number&quot;&gt;number: &lt;dfn title=&quot;required&quot;&gt;*&lt;/dfn&gt;&lt;/label&gt;
+  &lt;input name=&quot;number&quot; required=&quot;required&quot; type=&quot;number&quot; id=&quot;number&quot; form=&quot;form&quot;&gt;
+  &lt;label for=&quot;range&quot;&gt;range:&lt;/label&gt;
+  &lt;input name=&quot;range&quot; type=&quot;range&quot; id=&quot;range&quot;&gt;
+  &lt;label for=&quot;password&quot;&gt;password:&lt;/label&gt;
+  &lt;input placeholder=&quot;password&quot; name=&quot;password&quot; type=&quot;password&quot; id=&quot;password&quot;&gt;
+  &lt;label for=&quot;textarea&quot;&gt;textarea: * ([maxlength=&quot;6&quot;])&lt;/label&gt;
+  &lt;textarea placeholder=&quot;hello this is a textbox&quot; maxlength=&quot;6&quot; required=&quot;required&quot; name=&quot;textarea&quot; id=&quot;textarea&quot;&amp;gt;&lt;/textarea&gt;
+  &lt;label for=&quot;select&quot;&gt;select: *&lt;/label&gt;
+  &lt;select required=&quot;required&quot; name=&quot;select&quot; id=&quot;select&quot;&gt;
+    &lt;option value=&quot;&quot;&gt;Please choose&lt;/option&gt;
+    &lt;option&gt;Option 1&lt;/option&gt;
+    &lt;option&gt;Option 2&lt;/option&gt;
+    &lt;option&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;label for=&quot;number2&quot;&gt;number + number = output:&lt;/label&gt;
+  &lt;input step=&quot;0.5&quot; value=&quot;0&quot; name=&quot;number2&quot; type=&quot;number&quot; id=&quot;number2&quot;&gt; 
+  &lt;input name=&quot;number3&quot; id=&quot;number3&quot; value=&quot;0&quot; type=&quot;number&quot;&gt;
+  &lt;output id=&quot;output2&quot;&gt;&lt;/output&gt;
+&lt;/fieldset&gt;
+&lt;h3&gt;Radio-Group Headline Short Labels &lt;dfn title=&quot;required&quot;&gt;*&lt;/dfn&gt;&lt;/h3&gt;
+&lt;fieldset class=&quot;mod&quot;&gt;
+  &lt;legend&gt;Legend Short Labels &lt;dfn title=&quot;required&quot;&gt;*&lt;/dfn&gt;&lt;/legend&gt;
+  &lt;label for=&quot;field6-1&quot;&gt; 
+    &lt;input type=&quot;radio&quot; id=&quot;field6-1&quot; name=&quot;radio-grp1-1&quot; required=&quot;&quot;&amp;gt;
+    Radiooption 2
+  &lt;/label&gt;
+  &lt;label for=&quot;field7-1&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;field7-1&quot; name=&quot;radio-grp1-1&quot;&gt;
+    Radiooption 2
+  &lt;/label&gt;
+  &lt;label for=&quot;field8-1&quot;&gt; 
+    &lt;input type=&quot;radio&quot; id=&quot;field8-1&quot; name=&quot;radio-grp1-1&quot;&gt;
+    Radiooption 3
+  &lt;/label&gt;
+&lt;/fieldset&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn&quot;&gt;Send&lt;/button&gt;</pre>
+          </section>
+
+          <section id="alerts">
+
+            <div class="section-header">
+              <h2>Alerts</h2>
+            </div>
+
+            <div class="styleguide-example bg-color-accentLighter">
+              <div class="alert ">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <span class="icon-warning" aria-hidden="true"></span>
+                <strong>Warning!</strong> Best check yo self, before you wreck yo self.
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
+  &lt;strong&gt;Warning!&lt;/strong&gt; Best check yo self, before you wreck yo self.
+&lt;/div&gt;
+</pre>
+
+            <div class="styleguide-example bg-color-accentLighter">
+              <div class="alert alert-block">
+                <button data-dismiss="alert" class="close" type="button">×</button>
+                <span class="icon-warning" aria-hidden="true"></span>
+                <h4>Warning!</h4>
+                <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-block"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
+  &lt;h4&gt;Warning!&lt;/h4&gt;
+  Best check yo self, you're not...
+&lt;/div&gt;
+</pre>
+
+            <div class="styleguide-example bg-color-accentLighter">
+              <div class="alert alert-error">
+                <button data-dismiss="alert" class="close" type="button">×</button>
+                <span class="icon-warning" aria-hidden="true"></span>
+                <strong>Oh snap!</strong> Change a few things up and try submitting again.
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-error"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+            <div class="styleguide-example bg-color-accentLighter">
+              <div class="alert alert-success">
+                <button data-dismiss="alert" class="close" type="button">×</button>
+                <span class="icon-success" aria-hidden="true"></span>
+                <strong>Well done!</strong> You successfully read this important alert message.
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-success"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+            <div class="styleguide-example bg-color-accentLighter">
+              <div class="alert alert-info">
+                <button data-dismiss="alert" class="close" type="button">×</button>
+                <span class="icon-information" aria-hidden="true"></span>
+                <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-info"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+          </section>
+
+          <section id="carousel">
+
+            <div class="section-header">
+              <h2>Carousel</h2>
+              <p>As seen on the home page</p>
+            </div>
+
+            <div class="styleguide-example">
+              <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="active item" style="background-image: url('/assets/img/slides/slide-01.jpg')">
+                      <div class="carousel-caption">
+                        <p>Before Your Doctor Visit <span class="uppercase">Understand Your Costs</span></p>
+                        <a href="#" class="whole"></a>
+                      </div>
+                  </div>
+                  <div class="item" style="background-image: url('/assets/img/slides/slide-02.jpg')">
+                      <div class="carousel-caption">
+                        <p>Some Random Headline <span class="uppercase">With Some Text Underneath</span></p>
+                        <a href="#" class="whole"></a>
+                      </div>
+                  </div>
+                  <div class="item" style="background-image: url('/assets/img/slides/slide-03.jpg')">
+                      <div class="carousel-caption">
+                        <p>Some Random Headline <span class="uppercase">With Some Text Underneath</span></p>
+                        <a href="#" class="whole"></a>
+                      </div>
+                  </div>      
+                </div> <!-- / .carousel-inner -->
+                <!-- Carousel nav -->
+                <ul class="carousel-nav nav nav-pills">
+                    <li><a class="active" href="#myCarousel" data-to="1" ><span class="hide-text">Slide 1</span></a></li>
+                    <li><a href="#myCarousel" data-to="2" ><span class="hide-text">Slide 2</span></a></li>
+                    <li><a href="#myCarousel" data-to="3" ><span class="hide-text">Slide 3</span></a></li>
+                </ul>
+              </div> <!-- / #myCarousel -->
+            </div>
+<pre class="prettyprint linenums">
+&lt;div id="myCarousel" class="carousel slide"&gt;
+  &lt;!-- Carousel items --&gt;
+  &lt;div class="carousel-inner"&gt;
+    &lt;div class="active item"&gt;…&lt;/div&gt;
+    &lt;div class="item"&gt;…&lt;/div&gt;
+    &lt;div class="item"&gt;…&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- Carousel nav --&gt;
+  &lt;a class="carousel-control left" href="#myCarousel" data-slide="prev"&gt;&amp;lsaquo;&lt;/a&gt;
+  &lt;a class="carousel-control right" href="#myCarousel" data-slide="next"&gt;&amp;rsaquo;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+          </section>
+
+          <section id="accordion">
+
+            <div class="section-header">
+              <h2>Accordion</h2>
+            </div>
+
+            <div class="styleguide-example">
+              <div id="accordion-parent" class="accordion">
+
+                <div id="accordShopInsur" class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="active accordion-toggle" data-toggle="collapse" data-parent="#accordion-parent" href="#collapseOne">Shop for Insurance</a>
+                  </div>
+                  <div id="collapseOne" class="accordion-body in collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-parent" href="#collapseTwo">Find a Doctor</a>
+                  </div>
+                  <div id="collapseTwo" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-parent" href="#collapseThree">Health Insurance Guide</a>
+                  </div>
+                  <div id="collapseThree" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-parent" href="#collapseFour">What Regence Offers</a>
+                  </div>
+                  <div id="collapseFour" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-parent" href="#collapseFive">Health &amp; Wellness</a>
+                  </div>
+                  <div id="collapseFive" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class="accordion" id="accordion2"&gt;
+  &lt;div class="accordion-group"&gt;
+    &lt;div class="accordion-heading"&gt;
+      &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"&gt;
+        Collapsible Group Item #1
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="collapseOne" class="accordion-body collapse in"&gt;
+      &lt;div class="accordion-inner"&gt;
+        Anim pariatur cliche...
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="accordion-group"&gt;
+    &lt;div class="accordion-heading"&gt;
+      &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"&gt;
+        Collapsible Group Item #2
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="collapseTwo" class="accordion-body collapse"&gt;
+      &lt;div class="accordion-inner"&gt;
+        Anim pariatur cliche...
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+...
+</pre>
+            <p>You can also use the plugin without the accordion markup. Make a button toggle the expanding and collapsing of another element.</p>
+<pre class="prettyprint linenums">
+&lt;button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo"&gt;
+  simple collapsible
+&lt;/button&gt;
+
+&lt;div id="demo" class="collapse in"&gt; … &lt;/div&gt;
+</pre>
+
+          </section>
+
+          <section id="reveal">
+
+            <div class="section-header">
+              <h2>Reveal</h2>
+            </div>
+
+            <div class="styleguide-example">
+              <div class="preview-container">
+                <p>Bacon ipsum dolor sit amet voluptate fugiat tail, aliquip elit flank corned beef proident nulla tempor prosciutto strip steak consequat boudin mollit. Minim jerky cow meatloaf, strip steak ut ribeye deserunt spare ribs andouille flank bacon velit. Aliqua adipisicing hamburger prosciutto in. Enim short ribs ham, strip steak fatback sed ea turducken sunt in.</p>
+                <p class="muted reveal">&#8230;</p>
+                <p class="reveal"><a class="toggle-reveal" href="#">[More]</a></p>
+                <div class="reveal hide">
+                  <p>Dolor exercitation nisi officia consequat. Consequat boudin adipisicing jerky leberkas excepteur magna esse pastrami dolore meatball ut laborum chicken dolore. Cillum nisi turkey tri-tip sirloin dolore pancetta in. Nisi ut mollit incididunt frankfurter esse ex pork belly sint shank quis prosciutto bresaola chuck. Ham hock deserunt ad, voluptate shank aliqua boudin non in jerky laboris ea quis labore short ribs.</p>
+                  <p><a class="toggle-reveal" href="#">[Hide]</a></p>
+                </div>
+              </div>
+            </div>
+<pre class="prettyprint linenums">&lt;div class=&quot;preview-container&quot;&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;p class=&quot;muted reveal&quot;&gt;...&lt;/p&gt;
+  &lt;p class=&quot;reveal&quot;&gt;&lt;a class=&quot;toggle-reveal&quot; href=&quot;#&quot;&gt;[More]&lt;/a&gt;&lt;/p&gt;
+  &lt;div class=&quot;reveal hide&quot;&gt; &lt;p&gt;...&lt;/p&gt;
+      &lt;p&gt;&lt;a class=&quot;toggle-reveal&quot; href=&quot;#&quot;&gt;[Hide]&lt;/a&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div> <!-- /container -->
+
+  <div class="nav-secondary">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span2x4">
+          <h3 class="title">Shop for Health Insurance</h3>
+          <ul class="nav unstyled">
+            <li><a href="#">Individual and families</a></li>
+            <li><a href="#">Through an employer</a></li>
+            <li><a href="#">For Medicare</a></li>
+          </ul>
+        </div>
+        <div class="span2x4">
+          <h3 class="title">Current Customers</h3>
+          <ul class="nav unstyled">
+            <li><a href="#">Individual and families</a></li>
+            <li><a href="#">Coverage through an employer</a></li>
+            <li><a href="#">Medicare eligible</a></li>
+            <li><a href="#">myRegence.com</a></li>
+          </ul>
+        </div>
+        <div class="span2x4">
+          <h3 class="title">Health &amp; Wellness</h3>
+          <ul class="nav unstyled">
+            <li><a href="#">Treatment Cost Estimates</a></li>
+            <li><a href="#">Prescription Information</a></li>
+            <li><a href="#">Health Insurance Guide</a></li>
+            <li><a href="#">Health &amp; Wellness News</a></li>
+          </ul>
+        </div>
+        <div class="span2x4">
+          <h3 class="title">About Regence</h3>
+          <ul class="nav unstyled">
+            <li><a href="#">Non-Profit Health Insurance</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Company News</a></li>
+            <li><a href="#">Legal</a></li>
+          </ul>
+        </div>
+        <div class="span2x4">
+          <h3 class="title">About Regence</h3>
+          <ul class="nav unstyled">
+            <li><a href="#">Non-Profit Health Insurance</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Company News</a></li>
+            <li><a href="#">Legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr/>
+      <div class="row-fluid">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li><a href="#contact">About Regence</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#news">News</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="row-fluid">
+      <div class="container">
+        <div class="span4">
+          <p>&copy; 2012 Regence <!-- BlueCross BlueShield of Oregon. All rights reserved. --></p>
+          <!-- <p>Regence BlueCross BlueShield of Oregon is an Independent Licensee of the Blue Cross and Blue Shield Association.</p> -->
+        </div>
+        <nav class="span8">
+          <ul class="nav nav-inverted nav-pills pull-right">
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#terms">Terms of Use</a></li>
+            <li><a href="#feedback"><span class="icon-feedback" aria-hidden="true"><b></b><i></i></span> Feedback</a></li>
+            <li><a href="#espanol">en Espa&ntilde;ol</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!--[if lte IE 8]>
+    <div class="row-fluid">
+      <div class="browser-support container">       
+        <div class="browser-support-box span12">         
+          Regence cares about cross browser support and supports all valid browsers.<br />
+          Appearances may vary based on browser supported features.
+        </div>    
+      </div>
+    </div>
+    <![endif]-->
+  </footer>
+
+  <!-- Regence Post DOM-Ready scripts -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/dev/plugins.js"></script>
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  <script type="text/javascript">
+    $('body').scrollspy();
+
+    var offset = 20;
+
+    $('.nav-styleguide a').click(function(event) {
+        event.preventDefault();
+        $($(this).attr('href'))[0].scrollIntoView();
+        scrollBy(0, +offset);
+    });
+  </script>
+</body>
+</html>

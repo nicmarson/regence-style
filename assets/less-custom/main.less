@@ -1,0 +1,64 @@
+/*!
+ * Main - Custom Styles
+ *
+ * Author - Nic Marson
+ * Date - 1/22/2013
+ * Version - 1.0
+ *
+ * Designed and built to fix consistency issues with the Medicare site
+ */
+
+// Core variables and mixins
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.less";
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot');
+  src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.svg#icomoon') format('svg'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Custom styles
+@import "custom-type.less";
+@import "custom-utilities.less";
+@import "custom-sprites.less";
+@import "custom-nav.less";
+@import "custom-article.less";
+@import "custom-top.less";
+@import "custom-bottom.less";
+@import "custom-hero.less";
+@import "custom-contact.less";
+
+
+.main {
+  background-color: #EFF5F7;
+  color: @textColor;
+}
+
+
+// MEDIA QUERIES
+// ------------------
+
+// Large desktops
+@import "custom-1200px-min.less";
+
+// Desktops and larger
+@import "custom-980px-min.less";
+
+// Tablets to regular desktops
+@media (min-width: 768px) and (max-width: 979px) {
+  .row-fluid .span2x4 {
+    width: 17.69%; //17.79
+  }
+}
+
+// Tablets and larger
+@import "custom-768px-min.less";
+
+// Phones to portrait tablets and narrow desktops
+@import "custom-767px-max.less";

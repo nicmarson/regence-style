@@ -1,0 +1,360 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Regence Style Guide</title>
+    <meta name="description" content="Style guide">
+    <meta name="viewport" content="width=device-width">
+    <!-- Web Fonts -->
+    <link href="http://fnt.webink.com/wfs/webink.css/?project=AEC37CF0-6B2D-450D-9777-5062C06CCACA&fonts=58A3DDEA-1A20-AFB9-54E7-882B2382F4AD:f=ProximaNova-SemiboldIt,5A9479E7-B0E0-2DCD-5F27-F7666DF19C0F:f=ProximaNova-LightIt,F5870F1F-48F5-36F5-550E-B276AA09225A:f=ProximaNova-RegularIt,1366810A-C17C-C074-FF25-E81320293740:f=ProximaNovaCond-Semibold,C344819E-7F64-52D2-5903-DE54F5382845:f=ProximaNova-Semibold,58DEFEBD-4A55-477B-3C13-525C6AEBDD7A:f=ProximaNova-Regular,3CE3758E-9A83-BA6E-300A-ACCFD5D3E584:f=ProximaNova-BoldIt,FF4969BA-A10C-C1F1-4CAE-97A4557D103C:f=ProximaNovaCond-Regular,C88A28DF-0112-63D9-25D2-A4EA08DAF75B:f=ProximaNova-Light,382B4521-6228-4C38-41BC-3DE66C7C910A:f=ProximaNova-Bold" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/docs.css">
+    <link rel="stylesheet" href="assets/css/prettify.css" />
+
+    <!-- Pre DOM-Ready scripts -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/modernizr.js"></script>
+    <script>
+      if( !window.html5 ){ window.html5 = {}; } window.html5.shivMethods = false;
+    </script>
+    <script type="text/javascript" src="assets/js/dev/extras/mousepress.js"></script>
+    <script type="text/javascript" src="assets/js/dev/polyfiller.js"></script>
+    <script type="text/javascript" src="assets/js/dev/polyfills.js"></script>
+    <script type="text/javascript" src="assets/js/dev/prettify/prettify.js"></script>
+
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <link itemprop="audience" href="http://schema.org/Patient" />
+    <link itemprop="specialty" href="http://schema.org/PublicHealth" />
+    <meta itemprop="lastReviewed" content="2013-05-02"/>
+    
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Styleguide</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">Home</a>
+              </li>
+              <li class="active">
+                <a href="./getting-started.html">Get started</a>
+              </li>
+              <li class="">
+                <a href="./layout.html">Layout</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">Base CSS</a>
+              </li>
+              <li class="">
+                <a href="./components.html">Components</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">JavaScript</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header
+    ================================================== -->
+    <nav class="wp-header clearfix" id="top" itemprop="WPHeader" role="banner">
+      <div class="container">
+        <ul class="nav visuallyhidden">
+          <li><a href="#hero">Skip to Content</a></li>
+          <li><a href="#nav">Skip to Navigation</a></li>
+          <li><a href="/medicare">Return to Homepage</a></li>
+        </ul>
+        <ul class="nav clearfix" itemscope itemtype="http://schema.org/Organization">
+          <li class="nav-brand">
+            <a class="logo-regence-cs" href="index.html">
+              <span class="brand-logo"><span class="hide-text">Regence</span></span>
+              <span class="brand-region">BlueCross BlueShield of Oregon</span>
+            </a>
+          </li>
+          <li class="nav-login"><a href="#login">Sign in</a></li>
+          <li class="nav-shopping">
+            <a id="js-shopping-toggle" href="#" class="toggle shopping-toggle-button"><span class="shopping-label">Visitor <small>New Location</small></span><span aria-hidden="true" class="icon-users hidden-phone"></span><b class="caret"></b></a>
+          </li>
+          <li class="nav-search">
+            <form class="form-search" action="http://www.regence.com/about/search.jsp" method="get" name="header-search" id="search" role="search">
+              <label for="searchQuery" class="hide">Search</label>
+              <input type="text" id="searchQuery" name="searchQuery" placeholder="Search" class="input-medium search-query">
+              <button type="submit" class="btn btn-link"><span class="icon-search" aria-hidden="true"></span><span class="visuallyhidden">Go</span></button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Masthead
+    ================================================== -->
+    <header id="overview" class="jumbotron subhead">
+      <div class="container">
+        <h1>Getting started</h1>
+        <p class="lead">Overview of the project, its contents, and how to get started with a simple template.</p>
+      </div>
+    </header>
+
+    <div class="container">
+
+      <!-- Docs nav
+      ================================================== -->
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix">
+            <li class=""><a href="#download-bootstrap"><i class="icon-chevron-right"></i> Download</a></li>
+            <li class=""><a href="#file-structure"><i class="icon-chevron-right"></i> File structure</a></li>
+            <li class=""><a href="#contents"><i class="icon-chevron-right"></i> What's included</a></li>
+            <li class=""><a href="#html-template"><i class="icon-chevron-right"></i> HTML template</a></li>
+            <li class=""><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
+            <li class="active"><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li>
+          </ul>
+        </div>
+        <div class="span9">
+
+
+
+          <!-- Download
+          ================================================== -->
+          <section id="download-bootstrap">
+            <div class="page-header">
+              <h1>1. Download</h1>
+            </div>
+            <p class="lead">Before downloading, be sure to have a code editor (we recommend <a href="http://sublimetext.com/2">Sublime Text 2</a>) and some working knowledge of HTML and CSS. We won't walk through the source files here, but they are available for download. We'll focus on getting started with the compiled Bootstrap files.</p>
+
+            <div class="row-fluid">
+              <div class="span6">
+                <h2>Download compiled</h2>
+                <p><strong>Fastest way to get started:</strong> get the compiled and minified versions of our CSS, JS, and images. No docs or original source files.</p>
+                <p><a onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" href="assets/bootstrap.zip" class="btn btn-large btn-primary">Download Bootstrap</a></p>
+              </div>
+              <div class="span6">
+                <h2>Download source</h2>
+                <p>Get the original files for all CSS and JavaScript, along with a local copy of the docs by downloading the latest version directly from GitHub.</p>
+                <p><a onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);" href="https://github.com/twitter/bootstrap/zipball/master" class="btn btn-large">Download Bootstrap source</a></p>
+              </div>
+            </div>
+          </section>
+
+
+
+          <!-- File structure
+          ================================================== -->
+          <section id="file-structure">
+            <div class="page-header">
+              <h1>2. File structure</h1>
+            </div>
+            <p class="lead">Within the download you'll find the following file structure and contents, logically grouping common assets and providing both compiled and minified variations.</p>
+            <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Bootstrap. You'll see something like this:</p>
+  <pre class="prettyprint"><span class="pln">  bootstrap</span><span class="pun">/</span><span class="pln">
+    </span><span class="pun">├──</span><span class="pln"> css</span><span class="pun">/</span><span class="pln">
+    </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> bootstrap</span><span class="pun">.</span><span class="pln">css
+    </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> bootstrap</span><span class="pun">.</span><span class="pln">min</span><span class="pun">.</span><span class="pln">css
+    </span><span class="pun">├──</span><span class="pln"> js</span><span class="pun">/</span><span class="pln">
+    </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> bootstrap</span><span class="pun">.</span><span class="pln">js
+    </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> bootstrap</span><span class="pun">.</span><span class="pln">min</span><span class="pun">.</span><span class="pln">js
+    </span><span class="pun">└──</span><span class="pln"> img</span><span class="pun">/</span><span class="pln">
+        </span><span class="pun">├──</span><span class="pln"> glyphicons</span><span class="pun">-</span><span class="pln">halflings</span><span class="pun">.</span><span class="pln">png
+        </span><span class="pun">└──</span><span class="pln"> glyphicons</span><span class="pun">-</span><span class="pln">halflings</span><span class="pun">-</span><span class="pln">white</span><span class="pun">.</span><span class="pln">png</span></pre>
+            <p>This is the most basic form of Bootstrap: compiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (<code>bootstrap.*</code>), as well as compiled and minified CSS and JS (<code>bootstrap.min.*</code>). The image files are compressed using <a href="http://imageoptim.com/">ImageOptim</a>, a Mac app for compressing PNGs.</p>
+            <p>Please note that all JavaScript plugins require jQuery to be included.</p>
+          </section>
+
+
+
+          <!-- Contents
+          ================================================== -->
+          <section id="contents">
+            <div class="page-header">
+              <h1>3. What's included</h1>
+            </div>
+            <p class="lead">Bootstrap comes equipped with HTML, CSS, and JS for all sorts of things, but they can be summarized with a handful of categories visible at the top of the <a href="http://getbootstrap.com">Bootstrap documentation</a>.</p>
+
+            <h2>Docs sections</h2>
+            <h4><a href="http://twitter.github.com/bootstrap/scaffolding.html">Scaffolding</a></h4>
+            <p>Global styles for the body to reset type and background, link styles, grid system, and two simple layouts.</p>
+            <h4><a href="http://twitter.github.com/bootstrap/base-css.html">Base CSS</a></h4>
+            <p>Styles for common HTML elements like typography, code, tables, forms, and buttons. Also includes <a href="http://glyphicons.com">Glyphicons</a>, a great little icon set.</p>
+            <h4><a href="http://twitter.github.com/bootstrap/components.html">Components</a></h4>
+            <p>Basic styles for common interface components like tabs and pills, navbar, alerts, page headers, and more.</p>
+            <h4><a href="http://twitter.github.com/bootstrap/javascript.html">JavaScript plugins</a></h4>
+            <p>Similar to Components, these JavaScript plugins are interactive components for things like tooltips, popovers, modals, and more.</p>
+
+            <h2>List of components</h2>
+            <p>Together, the <strong>Components</strong> and <strong>JavaScript plugins</strong> sections provide the following interface elements:</p>
+            <ul>
+              <li>Button groups</li>
+              <li>Button dropdowns</li>
+              <li>Navigational tabs, pills, and lists</li>
+              <li>Navbar</li>
+              <li>Labels</li>
+              <li>Badges</li>
+              <li>Page headers and hero unit</li>
+              <li>Thumbnails</li>
+              <li>Alerts</li>
+              <li>Progress bars</li>
+              <li>Modals</li>
+              <li>Dropdowns</li>
+              <li>Tooltips</li>
+              <li>Popovers</li>
+              <li>Accordion</li>
+              <li>Carousel</li>
+              <li>Typeahead</li>
+            </ul>
+            <p>In future guides, we may walk through these components individually in more detail. Until then, look for each of these in the documentation for information on how to utilize and customize them.</p>
+          </section>
+
+
+
+          <!-- HTML template
+          ================================================== -->
+          <section id="html-template">
+            <div class="page-header">
+              <h1>4. Basic HTML template</h1>
+            </div>
+            <p class="lead">With a brief intro into the contents out of the way, we can focus on putting Bootstrap to use. To do that, we'll utilize a basic HTML template that includes everything we mentioned in the <a href="./getting-started.html#file-structure">File structure</a>.</p>
+            <p>Now, here's a look at a <strong>typical HTML file</strong>:</p>
+  <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="dec">&lt;!DOCTYPE html&gt;</span></li><li class="L1"><span class="tag">&lt;html&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;head&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;title&gt;</span><span class="pln">Bootstrap 101 Template</span><span class="tag">&lt;/title&gt;</span></li><li class="L4"><span class="pln">    </span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"viewport"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">  </span><span class="tag">&lt;/head&gt;</span></li><li class="L6"><span class="pln">  </span><span class="tag">&lt;body&gt;</span></li><li class="L7"><span class="pln">    </span><span class="tag">&lt;h1&gt;</span><span class="pln">Hello, world!</span><span class="tag">&lt;/h1&gt;</span></li><li class="L8"><span class="pln">    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv"><span>"<a href="http://code.jquery.com/jquery.js">http://code.jquery.com/jquery.js</a>"</span></span><span class="tag">&gt;&lt;/script&gt;</span></li><li class="L9"><span class="pln">  </span><span class="tag">&lt;/body&gt;</span></li><li class="L0"><span class="tag">&lt;/html&gt;</span></li></ol></pre>
+            <p>To make this <strong>a Bootstrapped template</strong>, just include the appropriate CSS and JS files:</p>
+  <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="dec">&lt;!DOCTYPE html&gt;</span></li><li class="L1"><span class="tag">&lt;html&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;head&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;title&gt;</span><span class="pln">Bootstrap 101 Template</span><span class="tag">&lt;/title&gt;</span></li><li class="L4"><span class="pln">    </span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"viewport"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">    </span><span class="com">&lt;!-- Bootstrap --&gt;</span></li><li class="L6"><span class="pln">    </span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"css/bootstrap.min.css"</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="atn">media</span><span class="pun">=</span><span class="atv">"screen"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">  </span><span class="tag">&lt;/head&gt;</span></li><li class="L8"><span class="pln">  </span><span class="tag">&lt;body&gt;</span></li><li class="L9"><span class="pln">    </span><span class="tag">&lt;h1&gt;</span><span class="pln">Hello, world!</span><span class="tag">&lt;/h1&gt;</span></li><li class="L0"><span class="pln">    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv"><span>"<a href="http://code.jquery.com/jquery.js">http://code.jquery.com/jquery.js</a>"</span></span><span class="tag">&gt;&lt;/script&gt;</span></li><li class="L1"><span class="pln">    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"js/bootstrap.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;/body&gt;</span></li><li class="L3"><span class="tag">&lt;/html&gt;</span></li></ol></pre>
+            <p><strong>And you're set!</strong> With those two files added, you can begin to develop any site or application with Bootstrap.</p>
+          </section>
+
+
+
+          <!-- Examples
+          ================================================== -->
+          <section id="examples">
+            <div class="page-header">
+              <h1>5. Examples</h1>
+            </div>
+            <p class="lead">Move beyond the base template with a few example layouts. We encourage folks to iterate on these examples and not simply use them as an end result.</p>
+            <ul class="thumbnails bootstrap-examples">
+              <li class="span3">
+                <a href="examples/starter-template.html" class="thumbnail">
+                  <img alt="" src="assets/img/examples/bootstrap-example-starter.png">
+                </a>
+                <h4>Starter template</h4>
+                <p>A barebones HTML document with all the Bootstrap CSS and JavaScript included.</p>
+              </li>
+              <li class="span3">
+                <a href="examples/hero.html" class="thumbnail">
+                  <img alt="" src="assets/img/examples/bootstrap-example-marketing.png">
+                </a>
+                <h4>Basic marketing site</h4>
+                <p>Featuring a hero unit for a primary message and three supporting elements.</p>
+              </li>
+              <li class="span3">
+                <a href="examples/fluid.html" class="thumbnail">
+                  <img alt="" src="assets/img/examples/bootstrap-example-fluid.png">
+                </a>
+                <h4>Fluid layout</h4>
+                <p>Uses our new responsive, fluid grid system to create a seamless liquid layout.</p>
+              </li>
+
+              <li class="span3">
+                <a href="examples/marketing-narrow.html" class="thumbnail">
+                  <img alt="" src="assets/img/examples/bootstrap-example-marketing-narrow.png">
+                </a>
+                <h4>Narrow marketing</h4>
+                <p>Slim, lightweight marketing template for small projects or teams.</p>
+              </li>
+              <li class="span3">
+                <a href="examples/justified-nav.html" class="thumbnail">
+                  <img alt="" src="assets/img/examples/bootstrap-example-justified-nav.png">
+                </a>
+                <h4>Justified nav</h4>
+                <p>Marketing page with equal-width navigation links in a modified navbar.</p>
+              </li>
+              <li class="span3">
+                <a href="examples/signin.html" class="thumbnail">
+                  <img alt="" src="assets/img/examples/bootstrap-example-signin.png">
+                </a>
+                <h4>Sign in</h4>
+                <p>Barebones sign in form with custom, larger form controls and a flexible layout.</p>
+              </li>
+
+              <li class="span3">
+                <a href="examples/sticky-footer.html" class="thumbnail">
+                  <img alt="" src="assets/img/examples/bootstrap-example-sticky-footer.png">
+                </a>
+                <h4>Sticky footer</h4>
+                <p>Pin a fixed-height footer to the bottom of the user's viewport.</p>
+              </li>
+              <li class="span3">
+                <a href="examples/carousel.html" class="thumbnail">
+                  <img alt="" src="assets/img/examples/bootstrap-example-carousel.png">
+                </a>
+                <h4>Carousel jumbotron</h4>
+                <p>A more interactive riff on the basic marketing site featuring a prominent carousel.</p>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Next
+          ================================================== -->
+          <section id="what-next">
+            <div class="page-header">
+              <h1>What next?</h1>
+            </div>
+            <p class="lead">Head to the docs for information, examples, and code snippets, or take the next leap and customize Bootstrap for any upcoming project.</p>
+            <a onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Visit docs']);" href="./scaffolding.html" class="btn btn-large btn-primary">Visit the Bootstrap docs</a>
+            <a onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Customize']);" style="margin-left: 5px;" href="./customize.html" class="btn btn-large">Customize Bootstrap</a>
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="wp-footer" id="bottom" role="contentinfo" itemprop="WPFooter">
+      <div class="row-fluid">
+        <div class="container">
+          <div class="span6">
+            <p>&copy; 2013 Regence <!-- BlueCross BlueShield of Oregon. All rights reserved. --></p>
+          </div>
+          <nav class="span6">
+            <ul class="nav nav-pills pull-right" role="navigation">
+              <li><a href="/legal/online-privacy-and-security/">Privacy</a></li>
+              <li><a href="/legal/terms-of-use/">Terms of Use</a></li>
+              <li><a onclick="oo_feedback.show()" href="javascript:void(0);"><span aria-hidden="true" class="icon-feedback"><b></b><i></i></span> Feedback</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+	
+  </body>
+</html>
