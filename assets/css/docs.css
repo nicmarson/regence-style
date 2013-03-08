@@ -1,3 +1,5 @@
+/* Add additional stylesheets below
+-------------------------------------------------- */
 /*!
  * Docs - Styleguide Styles
  *
@@ -93,12 +95,12 @@ section > ul li {
 }
 /* Faded out hr */
 hr.soften {
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
   height: 1px;
   margin: 70px 0;
-  -webkit-background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
-  -moz-background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
-  -o-background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
   border: 0;
 }
 /* Jumbotrons
@@ -106,15 +108,22 @@ hr.soften {
 /* Base class
 ------------------------- */
 .jumbotron {
-  -webkit-background-image: linear-gradient(45deg, #033652 0%, #916dbd 100%);
-  -moz-background-image: linear-gradient(45deg, #033652 0%, #916dbd 100%);
-  -o-background-image: linear-gradient(45deg, #033652 0%, #916dbd 100%);
-  background-image: linear-gradient(45deg, #033652 0%, #916dbd 100%);
+  background: #033048;
+  /* Old browsers */
+  background-color: #916dbd;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(45deg, #033048, #916dbd);
+  background-image: -webkit-linear-gradient(45deg, #033048, #916dbd);
+  background-image: -o-linear-gradient(45deg, #033048, #916dbd);
+  background-image: linear-gradient(45deg, #033048, #916dbd);
   -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
   -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
   box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
   padding: 40px 0;
   position: relative;
+}
+.jumbotron h1 {
+  font-family: "ProximaNova-Bold", "Arial Black", Verdana, sans-serif;
 }
 .jumbotron .btn {
   -webkit-border-radius: 0;
@@ -150,10 +159,21 @@ hr.soften {
   margin-bottom: 30px;
 }
 .masthead .caption {
-  -webkit-background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 100%);
-  -moz-background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 100%);
-  -o-background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 100%);
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 100%);
+  background: rgba(255, 255, 255, 0.5);
+  /* Old browsers */
+
+  background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 100%);
+  /* FF3.6+ */
+
+  background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 100%);
+  /* IE10+ */
+
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 100%);
+  /* W3C */
+
   bottom: 0;
   -webkit-box-shadow: inset 0 0 7px rgba(255,255,255,.2);
   -moz-box-shadow: inset 0 0 7px rgba(255,255,255,.2);
@@ -208,41 +228,41 @@ hr.soften {
 @-webkit-keyframes fadeInLeftBig {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(-2000px);
+    -webkit-transform: translatex(-2000px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0);
+    -webkit-transform: translatex(0);
   }
 }
 @-moz-keyframes fadeInLeftBig {
   0% {
     opacity: 0;
-    -moz-transform: translateX(-2000px);
+    -moz-transform: translatex(-2000px);
   }
   100% {
     opacity: 1;
-    -moz-transform: translateX(0);
+    -moz-transform: translatex(0);
   }
 }
 @-o-keyframes fadeInLeftBig {
   0% {
     opacity: 0;
-    -o-transform: translateX(-2000px);
+    -o-transform: translatex(-2000px);
   }
   100% {
     opacity: 1;
-    -o-transform: translateX(0);
+    -o-transform: translatex(0);
   }
 }
 @keyframes fadeInLeftBig {
   0% {
     opacity: 0;
-    transform: translateX(-2000px);
+    transform: translatex(-2000px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translatex(0);
   }
 }
 /* Subhead (other pages)
@@ -253,7 +273,6 @@ hr.soften {
 }
 .subhead h1 {
   color: #ffffff;
-  font-family: "ProximaNova-Bold", Verdana, sans-serif;
   font-size: 60px;
 }
 .subhead p {
@@ -301,10 +320,10 @@ hr.soften {
 #bottom {
   border-top: 1px solid #dddddd;
   background-color: #f5f5f5;
-  -webkit-background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
-  -moz-background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
-  -o-background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
   margin-top: 70px;
 }
 #bottom p {
@@ -366,18 +385,17 @@ hr.soften {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
-}
-.mini-layout,
-.mini-layout .mini-layout-body,
-.mini-layout.fluid .mini-layout-sidebar {
-  height: 300px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.075);
+  box-shadow: 0 1px 2px rgba(0,0,0,.075);
 }
 .mini-layout {
+  height: 300px;
   margin-bottom: 20px;
-  padding: 9px;
+  padding: 0 9px;
+}
+.mini-layout [class*="span"] {
+  height: 280px;
 }
 .mini-layout div {
   -webkit-border-radius: 3px;
@@ -386,21 +404,9 @@ hr.soften {
 }
 .mini-layout .mini-layout-body {
   background-color: #dceaf4;
-  margin: 0 auto;
-  width: 70%;
-}
-.mini-layout.fluid .mini-layout-sidebar,
-.mini-layout.fluid .mini-layout-header,
-.mini-layout.fluid .mini-layout-body {
-  float: left;
 }
 .mini-layout.fluid .mini-layout-sidebar {
   background-color: #bbd8e9;
-  width: 20%;
-}
-.mini-layout.fluid .mini-layout-body {
-  width: 77.5%;
-  margin-left: 2.5%;
 }
 /* Misc
 -------------------------------------------------- */
@@ -437,6 +443,20 @@ h2 + .row {
 .docs-input-sizes input[type=text] {
   display: block;
   margin-bottom: 9px;
+}
+/* Icons
+------------------------- */
+.the-icons {
+  margin-left: 0;
+  list-style: none;
+}
+.the-icons li {
+  float: left;
+  width: 25%;
+  line-height: 25px;
+}
+.the-icons i:hover {
+  background-color: rgba(255, 0, 0, 0.25);
 }
 /* Example page
 ------------------------- */
@@ -545,10 +565,14 @@ h2 + .row {
 form.bs-docs-example {
   padding-bottom: 19px;
 }
-/* Images */
-.bs-docs-example-images img {
-  margin: 10px;
-  display: inline-block;
+/* Web Fonts */
+.bs-docs-example-fonts dt {
+  font-size: 12px;
+}
+.bs-docs-example-fonts dd {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 10px;
 }
 /* Tooltips */
 .bs-docs-tooltip-examples {
@@ -719,34 +743,27 @@ form.bs-docs-example {
   bottom: 270px;
 }
 .glyph-sample {
-  background: #eff5f8;
+  background-color: #F7F7F9;
+  border: 1px solid #E1E1E8;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  box-shadow: inset 0 0 0 1px #ffffff, 0 0 0 1px #c6dde9;
   float: left;
   margin: 10px 20px 10px 0;
   padding: 10px;
   text-align: center;
   width: 7em;
 }
-.glyph-sample input {
-  background-color: #eff5f8;
-  margin-top: 10px;
-  padding: 0 !important;
-  text-align: center;
-  width: 100%;
-}
-.fs1 {
+.glyph-sample b {
+  display: block;
   font-size: 28px;
   line-height: 32px;
+  padding-bottom: 10px;
 }
-.box1 {
-  background: #dddddd;
-  display: inline-block;
-  margin: .5em 1em .5em 0;
-  padding: .25em .5em;
-  width: 15em;
+.glyph-sample code {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  padding: 4px 8px;
 }
 /* Responsive
 -------------------------------------------------- */
@@ -956,4 +973,151 @@ form.bs-docs-example {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+}
+.bg-color-brand {
+  background-color: #0881c2 !important;
+}
+.bg-color-accent {
+  background-color: #599abd !important;
+}
+.bg-color-accentDark {
+  background-color: #397290 !important;
+}
+.bg-color-accentDarker {
+  background-color: #244759 !important;
+}
+.bg-color-accentDarkest {
+  background-color: #152a35 !important;
+}
+.bg-color-accentLight {
+  background-color: #90bbd3 !important;
+}
+.bg-color-accentLighter {
+  background-color: #c6dde9 !important;
+}
+.bg-color-accentLightest {
+  background-color: #eff5f8 !important;
+}
+.bg-color-blue {
+  background-color: #076da5 !important;
+}
+.bg-color-green {
+  background-color: #1e9442 !important;
+}
+.bg-color-red {
+  background-color: #9d261d !important;
+}
+.bg-color-yellow {
+  background-color: #ffc40d !important;
+}
+.bg-color-orange {
+  background-color: #b94d00 !important;
+}
+.bg-color-pink {
+  background-color: #c3325f !important;
+}
+.bg-color-purple {
+  background-color: #916dbd !important;
+}
+.bg-color-burgundy {
+  background-color: #791321 !important;
+}
+.text-color-brand {
+  color: #0881c2 !important;
+}
+.text-color-accent {
+  color: #599abd !important;
+}
+.text-color-accentDark {
+  color: #397290 !important;
+}
+.text-color-accentDarker {
+  color: #244759 !important;
+}
+.text-color-accentDarkest {
+  color: #152a35 !important;
+}
+.text-color-accentLight {
+  color: #90bbd3 !important;
+}
+.text-color-accentLighter {
+  color: #c6dde9 !important;
+}
+.text-color-blue {
+  color: #076da5 !important;
+}
+.text-color-green {
+  color: #1e9442 !important;
+}
+.text-color-red {
+  color: #9d261d !important;
+}
+.text-color-yellow {
+  color: #ffc40d !important;
+}
+.text-color-orange {
+  color: #b94d00 !important;
+}
+.text-color-pink {
+  color: #c3325f !important;
+}
+.text-color-purple {
+  color: #916dbd !important;
+}
+.text-color-burgundy {
+  color: #791321 !important;
+}
+.webfontsOn {
+  display: none;
+}
+.fontface .webfontsOff {
+  display: none;
+}
+.fontface .webfontsOn {
+  display: inline;
+}
+.text-center {
+  text-align: center !important;
+}
+.fontfamily-sans {
+  font-family: "ProximaNova-Regular", Verdana, sans-serif !important;
+}
+.fontfamily-sansItalic {
+  font-family: "ProximaNova-RegularIt", Verdana, sans-serif !important;
+}
+.fontfamily-sansLight {
+  font-family: "ProximaNova-Light", Verdana, sans-serif !important;
+}
+.fontfamily-sansLightItalic {
+  font-family: "ProximaNova-LightIt", Verdana, sans-serif !important;
+}
+.fontfamily-sansSemibold {
+  font-family: "ProximaNova-Semibold", "Arial Black", sans-serif !important;
+}
+.fontfamily-sansSemiboldItalic {
+  font-family: "ProximaNova-SemiboldIt", "Arial Black", sans-serif !important;
+}
+.fontfamily-sansBold {
+  font-family: "ProximaNova-Bold", "Arial Black", Verdana, sans-serif !important;
+}
+.fontfamily-sansBoldItalic {
+  font-family: "ProximaNova-BoldIt", "Arial Black", sans-serif !important;
+}
+.fontfamily-sansCond {
+  font-family: "ProximaNovaCond-Regular", Verdana, sans-serif !important;
+}
+.fontfamily-sansCondSemibold {
+  font-family: "ProximaNovaCond-Semibold", Verdana, sans-serif !important;
+}
+.fontfamily-serif {
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+}
+.fontfamily-mono {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace !important;
+}
+.fontfamily-script {
+  font-family: 'NinaWebMedium', 'Chalkboard', 'ChalkboardSE-Regular', cursive !important;
+}
+.fontfamily-scriptBold {
+  font-family: 'NinaWeb-Bold', 'Chalkboard', 'ChalkboardSE-Regular', cursive !important;
 }

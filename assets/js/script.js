@@ -1,13 +1,26 @@
 $(function() {
   
   // Add visual toggle icons
-  $('[data-toggle="dropdown"]').append(' <b class="caret"></b>');
-  $('[data-toggle="collapse"]').append(' <b class="caret"></b>');
-  $('nav#nav div.container').prepend('<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">'+
+  // $('[data-toggle="dropdown"]').append(' <b class="caret"></b>');
+  // $('[data-toggle="collapse"]').append(' <b class="caret"></b>');
+  $('.navbar-fixed-top div.container').prepend('<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">'+
     '<span class="icon-bar"></span>'+
     '<span class="icon-bar"></span>'+
     '<span class="icon-bar"></span>'+
   '</a>');
+
+  // Pull quotes from a paragraph and add them at the end as a blockquote
+  $('span.pullquote').each(function() {
+    var $parentParagraph = $(this).parent('p');
+    var $quoteContent = $(this).text();
+    var $quoteParagraph = $('<p>').text($quoteContent);
+    $parentParagraph.css('position', 'relative');
+    $('<blockquote class="pull-right">').html($quoteParagraph).prependTo($parentParagraph);
+  });
+
+  // Images with height and width set increase loading time
+  // This overrides their setting so that they resize based on the window
+  $('.image img').height('auto').width('100%');
 
   // Anystretch Plugin for Responsive Images
   // This takes a background image and resizes it based on window size
@@ -40,6 +53,17 @@ $(function() {
     }
   });
 
+  // Open external links in a new window
+  $('a.external').on('click', function(){
+    window.open(this.href, '_blank');
+    return false;
+  }).append('&nbsp;<span class="icon-external" aria-hidden="true"></span>');
+
+  // Activate Tooltips
+  $('.tooltip-container').tooltip({
+    selector: "[rel=tooltip]"
+  });
+
   // NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
   // IT'S ALL JUST JUNK FOR OUR DOCS!
   // ++++++++++++++++++++++++++++++++++++++++++
@@ -55,7 +79,7 @@ $(function() {
   setTimeout(function () {
     $('.bs-docs-sidenav').affix({
       offset: {
-        top: function () { return $window.width() <= 980 ? 290 : 210 }
+        top: function () { return $window.width() <= 980 ? 290 : 260 }
       , bottom: 270
       }
     })

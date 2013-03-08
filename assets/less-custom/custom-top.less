@@ -21,7 +21,7 @@
         text-decoration: none;
         .transition(background-color .3s ease-in-out);
         
-        [class^="icon-"] {
+        [class^="glyph-"] {
           color: @brand;
         }
         small {        
@@ -36,7 +36,7 @@
           text-decoration: none;
 
           small,
-          [class^="icon-"] {
+          [class^="glyph-"] {
             color: @headerLinkColorHover;
           }
           .caret {
@@ -51,7 +51,7 @@
       text-decoration: none;
       
       small,
-      [class^="icon-"] {
+      [class^="glyph-"] {
         color: @white;
       }
       .caret {
@@ -68,75 +68,30 @@
     position: relative;
   }
 
+
   // Nav Brand
   .nav .nav-brand {
     float: left;
+    padding-bottom: 10px;
 
-    > a {
-      display: block;
+    .brand {
       height: 100%;
       margin-right: 5px;
-      padding-bottom: 18px;
-      position: relative;
       width: 100%;
 
       &:hover {
         background-color: transparent;
       }
     }
-    .brand-logo {
-      background: url("../img/identity/identity.png") no-repeat;
-      display: block;
-      max-width: 250px;
-      min-width: 143px;
-      position: relative;
-      *width: 250px;
-    }
-    .brand-region {
-      bottom: 10px;
-      color: @grayLight;
-      display: block;
-      font-family: arial;
-      font-size: 12px;
-      left: 20px;
-      line-height: 18px;
-      position: absolute;
-      white-space: nowrap;
-    }
-    .logo-asuris {
-      // Height 45px
-      padding-bottom: 23px;
-      padding-top: 12px;
-    }
-    .logo-myasuris {
-      // Height 33px
-      padding-bottom: 25px;
-      padding-top: 22px;
-    }
-    .logo-myregence {
-      // Height 50px
-      padding-bottom: 20px;
-      padding-top: 10px;
-    }
-    .logo-regence-s,
-    .logo-regence-cs {
-      // Height 33px
-      padding-bottom: 28px;
-      padding-top: 19px;
-    }
-    .logo-regence-s .brand-region {
-      left: 56px;
-    }
-    .logo-regence-cs .brand-region {
-      left: 70px;
-    }
   }
+
 
   // Nav Login 
   .nav .nav-login {
     float: right;
 
     a {
+      border-left: 1px solid @headerLinkBorder;
       line-height: 30px;
       padding: 25px 20px;
     }
@@ -149,7 +104,6 @@
     width: 49.9999%;
 
     form {
-      border-right: 1px solid @headerLinkBorder;
       border-top: 1px solid @headerLinkBorder;
       margin: 0;
       padding: 25px 15px 25px 5px;
@@ -176,7 +130,6 @@
     width: 49.9999%;
 
     > a {
-      border-left: 1px solid @headerLinkBorder;
       border-right: 1px solid @headerLinkBorder;
       border-top: 1px solid @headerLinkBorder;
       display: block;
@@ -194,7 +147,7 @@
       text-decoration: none;
       
       small,
-      [class^="icon-"] {
+      [class^="glyph-"] {
         color: @white;
       }
     }
@@ -212,7 +165,7 @@
       right: 15px;
       top: 22px;
     }
-    .icon-users {
+    .glyph-users {
       font-size: 26px;
       left: 16px;
       height: 40px;
@@ -233,7 +186,59 @@
   }
 }
 
-/* Logos */
+.brand {
+  display: block;
+  position: relative;
+}
+.brand-logo {
+  background: url("../img/identity/identity.png") no-repeat;
+  display: block;
+  max-width: 250px;
+  min-width: 143px;
+  position: relative;
+  *width: 250px;
+}
+.brand-region {
+  bottom: 0;
+  color: @grayLight;
+  display: block;
+  font-family: arial;
+  font-size: 12px;
+  left: 20px;
+  line-height: 18px;
+  position: absolute;
+  white-space: nowrap;
+}
+.logo-asuris {
+  // Height 45px
+  padding-bottom: 23px;
+  padding-top: 12px;
+}
+.logo-myasuris {
+  // Height 33px
+  padding-bottom: 25px;
+  padding-top: 22px;
+}
+.logo-myregence {
+  // Height 50px
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+.logo-regence-s,
+.logo-regence-cs {
+  // Height 33px
+  padding-bottom: 18px;
+  padding-top: 19px;
+}
+.logo-regence-s .brand-region {
+  left: 36px;
+}
+.logo-regence-cs .brand-region {
+  left: 70px;
+}
+
+
+// Logos
 .logo-asuris .brand-logo {
   background-position: 0 -300px;
   height: 45px;
@@ -259,17 +264,20 @@
   height: 33px;
   width: 145px;
 }
-/* High Res Support */
+
+
+// High Res Logos
 @media all and (-webkit-min-device-pixel-ratio : 1.5) {
 
-  .backgroundsize #top .brand-logo {
+  .backgroundsize .brand-logo {
     background-image: url("../img/identity/identity@2x.png");
     background-size: 250px auto; /* Actual width is 450px */
   }
 }
 
-/* SVG Support */
-.svg.backgroundsize #top {
+
+// SVG Logos
+.svg.backgroundsize {
 
   .logo-regence-cs .brand-logo {
     background: url("../img/identity/regence-cs.svg") no-repeat 0 0;

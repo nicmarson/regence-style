@@ -92,8 +92,55 @@
     font-weight: 700;
   }
 }
-.navbar-inverse .navbar-inner {
-  color: @white;
+
+// Inverted navbar
+// -------------------------
+
+.navbar-inverse {
+
+  .navbar-inner {
+    #gradient > .vertical(@navbarInverseBackgroundHighlight, @navbarInverseBackground);
+    border-color: @navbarInverseBorder;
+  }
+
+  .brand,
+  .nav > li > a {
+    color: @navbarInverseLinkColor;
+    &:hover,
+    &:focus {
+      color: @navbarInverseLinkColorHover;
+    }
+  }
+
+  .brand {
+    color: @navbarInverseBrandColor;
+  }
+
+  .navbar-text {
+    color: @navbarInverseText;
+  }
+
+  .nav > li > a:focus,
+  .nav > li > a:hover {
+    background-color: @navbarInverseLinkBackgroundHover;
+    color: @navbarInverseLinkColorHover;
+  }
+
+  .nav .active > a,
+  .nav .active > a:hover,
+  .nav .active > a:focus {
+    color: @navbarInverseLinkColorActive;
+    background-color: @navbarInverseLinkBackgroundActive;
+  }
+
+  // Inline text links
+  .navbar-link {
+    color: @navbarInverseLinkColor;
+    &:hover,
+    &:focus {
+      color: @navbarInverseLinkColorHover;
+    }
+  }
 }
 
 

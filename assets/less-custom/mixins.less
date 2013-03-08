@@ -317,9 +317,9 @@
 // Default value is `visible`, but can be changed to `hidden
 // See git pull https://github.com/dannykeane/bootstrap.git backface-visibility for examples
 .backface-visibility(@visibility){
-	-webkit-backface-visibility: @visibility;
-	   -moz-backface-visibility: @visibility;
-	        backface-visibility: @visibility;
+  -webkit-backface-visibility: @visibility;
+     -moz-backface-visibility: @visibility;
+          backface-visibility: @visibility;
 }
 
 // Background clipping
@@ -336,14 +336,6 @@
      -moz-background-size: @size;
        -o-background-size: @size;
           background-size: @size;
-}
-
-// Background image
-.background-image(@image) {
-  -webkit-background-image: @image;
-     -moz-background-image: @image;
-       -o-background-image: @image;
-          background-image: @image;
 }
 
 
@@ -583,13 +575,16 @@
   .core (@gridColumnWidth, @gridGutterWidth) {
 
     .spanX (@index) when (@index > 0) {
-      .span@{index} { .span(@index); }
+      .span(@index)
+      {
+        .span(@index);
+      }
       .spanX(@index - 1);
     }
     .spanX (0) {}
 
     .offsetX (@index) when (@index > 0) {
-      .offset@{index} { .offset(@index); }
+      .offset(@index) { .offset(@index); }
       .offsetX(@index - 1);
     }
     .offsetX (0) {}
@@ -628,21 +623,21 @@
   .fluid (@fluidGridColumnWidth, @fluidGridGutterWidth) {
 
     .spanX (@index) when (@index > 0) {
-      .span@{index} { .span(@index); }
+      .span(@index) { .span(@index); }
       .spanX(@index - 1);
     }
     .spanX (0) {}
 
     .offsetX (@index) when (@index > 0) {
-      .offset@{index} { .offset(@index); }
-      .offset@{index}:first-child { .offsetFirstChild(@index); }
+      .offset(@index) { .offset(@index); }
+      .offset(@index):first-child { .offsetFirstChild(@index); }
       .offsetX(@index - 1);
     }
     .offsetX (0) {}
 
     .offset (@columns) {
       margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth*2);
-  	  *margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + (@fluidGridGutterWidth*2) - (.5 / @gridRowWidth * 100 * 1%);
+      *margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + (@fluidGridGutterWidth*2) - (.5 / @gridRowWidth * 100 * 1%);
     }
 
     .offsetFirstChild (@columns) {
@@ -683,7 +678,7 @@
   .input(@gridColumnWidth, @gridGutterWidth) {
 
     .spanX (@index) when (@index > 0) {
-      input.span@{index}, textarea.span@{index}, .uneditable-input.span@{index} { .span(@index); }
+      input.span(@index), textarea.span(@index), .uneditable-input.span(@index) { .span(@index); }
       .spanX(@index - 1);
     }
     .spanX (0) {}

@@ -11,6 +11,7 @@
 // Core variables and mixins
 @import "variables.less"; // Modify this for custom colors, font-sizes, etc
 @import "mixins.less";
+@import "custom-mixins.less";
 
 
 /* Add additional stylesheets below
@@ -84,9 +85,12 @@ section {
 
 /* Faded out hr */
 hr.soften {
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
   height: 1px;
   margin: 70px 0;
-  .background-image(linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0)));
   border: 0;
 }
 
@@ -98,11 +102,15 @@ hr.soften {
 /* Base class
 ------------------------- */
 .jumbotron {
-  .background-image(linear-gradient(45deg, #033652 0%, @purple 100%));
+  background: @brandDarker; /* Old browsers */  
+  #gradient > .directional(@brandDarker, @purple, 45deg);
   .box-shadow(~"inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2)");
   padding: 40px 0;
   position: relative;
 
+  h1 {
+    font-family: @sansFontFamilyBold;
+  }
   .btn {
     .border-radius(0);
     font: 30px/24px @sansFontFamily;
@@ -136,7 +144,11 @@ hr.soften {
     margin-bottom: 30px;
   }
   .caption {
-    .background-image(linear-gradient(-45deg, rgba(255,255,255, .2) 0%, rgba(255,255,255, .8) 50%, rgba(255,255,255, .2) 100%));
+    background: rgba(255,255,255, .5); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(255,255,255, .2) 0%, rgba(255,255,255, .8) 50%, rgba(255,255,255, .2) 100%); /* FF3.6+ */
+    background: -webkit-linear-gradient(-45deg, rgba(255,255,255, .2) 0%, rgba(255,255,255, .8) 50%, rgba(255,255,255, .2) 100%); /* Chrome10+,Safari5.1+ */
+    background: -ms-linear-gradient(-45deg, rgba(255,255,255, .2) 0%, rgba(255,255,255, .8) 50%, rgba(255,255,255, .2) 100%); /* IE10+ */
+    background: linear-gradient(-45deg, rgba(255,255,255, .2) 0%, rgba(255,255,255, .8) 50%, rgba(255,255,255, .2) 100%); /* W3C */
     bottom: 0;
     .box-shadow(~"inset 0 0 7px rgba(255,255,255,.2)");
     color: @grayDarker;
@@ -231,7 +243,6 @@ hr.soften {
 
   h1 {
     color: @white;
-    font-family: @sansFontFamilyBold;
     font-size: 60px;
   }
   p {
@@ -289,7 +300,10 @@ hr.soften {
 #bottom {
   border-top: 1px solid @grayLighter;
   background-color: #f5f5f5;
-  .background-image(linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0)));
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
   margin-top: 70px;
 
   p {
@@ -359,44 +373,25 @@ hr.soften {
 -------------------------------------------------- */
 .mini-layout {
   border: 1px solid #ddd;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.075);
-          box-shadow: 0 1px 2px rgba(0,0,0,.075);
-}
-.mini-layout,
-.mini-layout .mini-layout-body,
-.mini-layout.fluid .mini-layout-sidebar {
-  height: 300px;
+  .border-radius(6px);
+  .box-shadow(~"0 1px 2px rgba(0,0,0,.075)");
 }
 .mini-layout {
+  height: 300px;
   margin-bottom: 20px;
-  padding: 9px;
+  padding: 0 9px;
+}
+.mini-layout [class*="span"] {
+  height: 280px;
 }
 .mini-layout div {
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  .border-radius(3px);
 }
 .mini-layout .mini-layout-body {
   background-color: #dceaf4;
-  margin: 0 auto;
-  width: 70%;
-}
-.mini-layout.fluid .mini-layout-sidebar,
-.mini-layout.fluid .mini-layout-header,
-.mini-layout.fluid .mini-layout-body {
-  float: left;
 }
 .mini-layout.fluid .mini-layout-sidebar {
   background-color: #bbd8e9;
-  width: 20%;
-}
-.mini-layout.fluid .mini-layout-body {
-  width: 77.5%;
-  margin-left: 2.5%;
 }
 
 
@@ -441,6 +436,22 @@ h2 + .row {
 .docs-input-sizes input[type=text] {
   display: block;
   margin-bottom: 9px;
+}
+
+
+/* Icons
+------------------------- */
+.the-icons {
+  margin-left: 0;
+  list-style: none;
+}
+.the-icons li {
+  float: left;
+  width: 25%;
+  line-height: 25px;
+}
+.the-icons i:hover {
+  background-color: rgba(255,0,0,.25);
 }
 
 
@@ -549,10 +560,16 @@ form.bs-docs-example {
   padding-bottom: 19px;
 }
 
-/* Images */
-.bs-docs-example-images img {
-  margin: 10px;
-  display: inline-block;
+/* Web Fonts */
+.bs-docs-example-fonts {
+  dt {
+    font-size: 12px;
+  }
+  dd {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
 }
 
 /* Tooltips */
@@ -735,33 +752,26 @@ form.bs-docs-example {
 // Glyphs
 // -------------------
 .glyph-sample {
-  background: @accentLightest;
+  background-color: #F7F7F9;
+  border: 1px solid #E1E1E8;
   .border-radius(4px);
-  box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px @accentLighter;
   float: left;
   margin: (@baseLineHeight/2) @baseLineHeight (@baseLineHeight/2) 0;
-  padding: @baseLineHeight/2;
+  padding: 10px;
   text-align: center;
   width: 7em;
 
-  input {
-    background-color: @accentLightest;
-    margin-top: @baseLineHeight/2;
-    padding: 0 !important;
-    text-align: center;
-    width: 100%;
+  b {
+    display: block;
+    font-size: 28px;
+    line-height: 32px;
+    padding-bottom: 10px;    
   }
-}
-.fs1 {
-  font-size: 28px;
-  line-height: 32px;
-}
-.box1 {
-  background: @grayLighter;
-  display: inline-block;
-  margin: .5em 1em .5em 0;
-  padding: .25em .5em;
-  width: 15em;
+  code {
+    background-color: rgba(255,255,255, .5);
+    font-size: 14px;
+    padding: 4px 8px;
+  }
 }
 
 
@@ -1007,4 +1017,162 @@ form.bs-docs-example {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+}
+
+
+// Background Colors
+.bg-color-brand {
+  background-color: @brand !important;
+}
+.bg-color-accent {
+  background-color: @accent !important;
+}
+.bg-color-accentDark {
+  background-color: @accentDark !important;
+}
+.bg-color-accentDarker {
+  background-color: @accentDarker !important;
+}
+.bg-color-accentDarkest {
+  background-color: @accentDarkest !important;
+}
+.bg-color-accentLight {
+  background-color: @accentLight !important;
+}
+.bg-color-accentLighter {
+  background-color: @accentLighter !important;
+}
+.bg-color-accentLightest {
+  background-color: @accentLightest !important;
+}
+.bg-color-blue {
+  background-color: @blue !important;
+}
+.bg-color-green {
+  background-color: @green !important;
+}
+.bg-color-red {
+  background-color: @red !important;
+}
+.bg-color-yellow {
+  background-color: @yellow !important;
+}
+.bg-color-orange {
+  background-color: @orange !important;
+}
+.bg-color-pink {
+  background-color: @pink !important;
+}
+.bg-color-purple {
+  background-color: @purple !important;
+}
+.bg-color-burgundy {
+  background-color: @burgundy !important;
+}
+
+
+// Text Colors
+.text-color-brand {
+  color: @brand !important;
+}
+.text-color-accent {
+  color: @accent !important;
+}
+.text-color-accentDark {
+  color: @accentDark !important;
+}
+.text-color-accentDarker {
+  color: @accentDarker !important;
+}
+.text-color-accentDarkest {
+  color: @accentDarkest !important;
+}
+.text-color-accentLight {
+  color: @accentLight !important;
+}
+.text-color-accentLighter {
+  color: @accentLighter !important;
+}
+.text-color-blue {
+  color: @blue !important;
+}
+.text-color-green {
+  color: @green !important;
+}
+.text-color-red {
+  color: @red !important;
+}
+.text-color-yellow {
+  color: @yellow !important;
+}
+.text-color-orange {
+  color: @orange !important;
+}
+.text-color-pink {
+  color: @pink !important;
+}
+.text-color-purple {
+  color: @purple !important;
+}
+.text-color-burgundy {
+  color: @burgundy !important;
+}
+
+
+//Typography
+.webfontsOn {
+  display: none;
+}
+.fontface {
+
+  .webfontsOff {
+    display: none;
+  }
+  .webfontsOn {
+    display: inline;
+  }
+}
+.text-center {
+  text-align: center !important;
+}
+.fontfamily-sans {
+  font-family: @sansFontFamily !important;
+}.fontfamily-sansItalic {
+  font-family: @sansFontFamilyIt !important;
+}
+.fontfamily-sansLight {
+  font-family: @sansFontFamilyLight !important;
+}
+.fontfamily-sansLightItalic {
+  font-family: @sansFontFamilyLightIt !important;
+}
+.fontfamily-sansSemibold {
+  font-family: @sansFontFamilySemibold !important;
+}
+.fontfamily-sansSemiboldItalic {
+  font-family: @sansFontFamilySemiboldIt !important;
+}
+.fontfamily-sansBold {
+  font-family: @sansFontFamilyBold !important;
+}
+.fontfamily-sansBoldItalic {
+  font-family: @sansFontFamilyBoldIt !important;
+}
+.fontfamily-sansCond {
+  font-family: @sansFontFamilyCond !important;
+}
+.fontfamily-sansCondSemibold {
+  font-family: @sansFontFamilyCondSemibold!important;
+}
+.fontfamily-serif {
+  font-family: @serifFontFamily !important;
+}
+.fontfamily-mono {
+  font-family: @monoFontFamily !important;
+}
+.fontfamily-script {
+  font-family: @scriptFontFamily !important;
+}
+.fontfamily-scriptBold {
+  font-family: @scriptFontFamilyBold !important;
 }

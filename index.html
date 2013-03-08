@@ -3,150 +3,202 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Regence Style Guide</title>
-    <meta name="description" content="Style guide">
-    <meta name="viewport" content="width=device-width">
-    <!-- Web Fonts -->
-    <link href="http://fnt.webink.com/wfs/webink.css/?project=AEC37CF0-6B2D-450D-9777-5062C06CCACA&fonts=58A3DDEA-1A20-AFB9-54E7-882B2382F4AD:f=ProximaNova-SemiboldIt,5A9479E7-B0E0-2DCD-5F27-F7666DF19C0F:f=ProximaNova-LightIt,F5870F1F-48F5-36F5-550E-B276AA09225A:f=ProximaNova-RegularIt,1366810A-C17C-C074-FF25-E81320293740:f=ProximaNovaCond-Semibold,C344819E-7F64-52D2-5903-DE54F5382845:f=ProximaNova-Semibold,58DEFEBD-4A55-477B-3C13-525C6AEBDD7A:f=ProximaNova-Regular,3CE3758E-9A83-BA6E-300A-ACCFD5D3E584:f=ProximaNova-BoldIt,FF4969BA-A10C-C1F1-4CAE-97A4557D103C:f=ProximaNovaCond-Regular,C88A28DF-0112-63D9-25D2-A4EA08DAF75B:f=ProximaNova-Light,382B4521-6228-4C38-41BC-3DE66C7C910A:f=ProximaNova-Bold" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/docs.css">
-    <link rel="stylesheet" href="assets/css/prettify.css" />
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Regence Style Guide</title>
+  <meta name="description" content="Style guide">
+  <meta name="viewport" content="width=device-width">
+  <!-- Web Fonts -->
+  <link href="http://fnt.webink.com/wfs/webink.css/?project=AEC37CF0-6B2D-450D-9777-5062C06CCACA&fonts=58A3DDEA-1A20-AFB9-54E7-882B2382F4AD:f=ProximaNova-SemiboldIt,5A9479E7-B0E0-2DCD-5F27-F7666DF19C0F:f=ProximaNova-LightIt,F5870F1F-48F5-36F5-550E-B276AA09225A:f=ProximaNova-RegularIt,1366810A-C17C-C074-FF25-E81320293740:f=ProximaNovaCond-Semibold,C344819E-7F64-52D2-5903-DE54F5382845:f=ProximaNova-Semibold,58DEFEBD-4A55-477B-3C13-525C6AEBDD7A:f=ProximaNova-Regular,3CE3758E-9A83-BA6E-300A-ACCFD5D3E584:f=ProximaNova-BoldIt,FF4969BA-A10C-C1F1-4CAE-97A4557D103C:f=ProximaNovaCond-Regular,C88A28DF-0112-63D9-25D2-A4EA08DAF75B:f=ProximaNova-Light,382B4521-6228-4C38-41BC-3DE66C7C910A:f=ProximaNova-Bold" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/docs.css">
+  <link rel="stylesheet" href="assets/css/prettify.css" />
 
-    <!-- Pre DOM-Ready scripts -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/modernizr.js"></script>
-    <script>
-      if( !window.html5 ){ window.html5 = {}; } window.html5.shivMethods = false;
-    </script>
-    <script type="text/javascript" src="assets/js/dev/extras/mousepress.js"></script>
-    <script type="text/javascript" src="assets/js/dev/polyfiller.js"></script>
-    <script type="text/javascript" src="assets/js/dev/polyfills.js"></script>
-    <script type="text/javascript" src="assets/js/dev/prettify/prettify.js"></script>
+  <!-- Pre DOM-Ready scripts -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <script>
+    if( !window.html5 ){ window.html5 = {}; } window.html5.shivMethods = false;
+  </script>
 
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
-  </head>
-  <body data-spy="scroll" data-target=".bs-docs-sidebar">
-    <link itemprop="audience" href="http://schema.org/Patient" />
-    <link itemprop="specialty" href="http://schema.org/PublicHealth" />
-    <meta itemprop="lastReviewed" content="2013-05-02"/>
-    
-    <!--[if lt IE 7]>
-        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
+  <link rel="shortcut icon" href="assets/ico/favicon.png">
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <link itemprop="audience" href="http://schema.org/Patient" />
+  <link itemprop="specialty" href="http://schema.org/PublicHealth" />
+  <meta itemprop="lastReviewed" content="2013-05-02"/>
+  
+  <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
 
-    <!-- Navbar
-    ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="./index.html">Styleguide</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active">
-                <a href="./index.html">Home</a>
-              </li>
-              <li class="">
-                <a href="./getting-started.html">Get started</a>
-              </li>
-              <li class="">
-                <a href="./layout.html">Layout</a>
-              </li>
-              <li class="">
-                <a href="./base-css.html">Base CSS</a>
-              </li>
-              <li class="">
-                <a href="./components.html">Components</a>
-              </li>
-              <li class="">
-                <a href="./javascript.html">JavaScript</a>
-              </li>
-            </ul>
-          </div>
+  <!-- Navbar
+  ================================================== -->
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="./index.html">Regence Styleguide</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li class="active">
+              <a href="./index.html">Home</a>
+            </li>
+            <li class="">
+              <a href="./getting-started.html">Get started</a>
+            </li>
+            <li class="">
+              <a href="./layout.html">Layout</a>
+            </li>
+            <li class="">
+              <a href="./base-css.html">Base CSS</a>
+            </li>
+            <li class="">
+              <a href="./components.html">Components</a>
+            </li>
+            <li class="">
+              <a href="./javascript.html">JavaScript</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Header
-    ================================================== -->
-    <nav class="wp-header clearfix" id="top" itemprop="WPHeader" role="banner">
-      <div class="container">
-        <ul class="nav visuallyhidden">
-          <li><a href="#hero">Skip to Content</a></li>
-          <li><a href="#nav">Skip to Navigation</a></li>
-          <li><a href="/medicare">Return to Homepage</a></li>
-        </ul>
-        <ul class="nav clearfix" itemscope itemtype="http://schema.org/Organization">
-          <li class="nav-brand">
-            <a class="logo-regence-cs" href="index.html">
-              <span class="brand-logo"><span class="hide-text">Regence</span></span>
-              <span class="brand-region">BlueCross BlueShield of Oregon</span>
+  <!-- Header
+  ================================================== -->
+  <nav class="wp-header clearfix" id="top" itemprop="WPHeader" role="banner">
+    <div class="container">
+      <ul class="nav visuallyhidden">
+        <li><a href="#hero">Skip to Content</a></li>
+        <li><a href="#nav">Skip to Navigation</a></li>
+        <li><a href="/medicare">Return to Homepage</a></li>
+      </ul>
+      <ul class="nav clearfix" itemscope itemtype="http://schema.org/Organization">
+        <li class="nav-brand">
+          <a class="brand logo-regence-cs" href="index.html">
+            <span class="brand-logo"><span class="hide-text">Regence</span></span>
+            <span class="brand-region">BlueCross BlueShield of Oregon</span>
+          </a>
+        </li>
+        <li class="nav-login"><a href="#login">Sign in</a></li>
+        <li class="nav-shopping">
+          <a id="js-shopping-toggle" href="#" class="toggle shopping-toggle-button"><span class="shopping-label">Visitor <small>New Location</small></span><span aria-hidden="true" class="icon-users hidden-phone"></span><b class="caret"></b></a>
+        </li>
+        <li class="nav-search">
+          <form class="form-search" action="http://www.regence.com/about/search.jsp" method="get" name="header-search" id="search" role="search">
+            <label for="searchQuery" class="hide">Search</label>
+            <input type="text" id="searchQuery" name="searchQuery" placeholder="Search" class="input-medium search-query">
+            <button type="submit" class="btn btn-link"><span class="icon-search" aria-hidden="true"></span><span class="visuallyhidden">Go</span></button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Masthead
+  ================================================== -->
+  <div class="jumbotron masthead">
+    <div class="container">
+      <div class="caption">
+        <h1>Regence Styleguide</h1>
+        <p>Style guide for Regence portal web development.</p>
+        <p><a class="btn btn-primary" href="./getting-started.html">Get started<br>
+        <small>How to use this guide</small></a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="marketing">
+
+      <h1>Introducing Bootstrap.</h1>
+      <p class="marketing-byline">Need reasons to love Bootstrap? Look no further.</p>
+
+      <div class="row-fluid">
+        <div class="span4">
+          <img class="marketing-img" src="assets/img/bs-docs-twitter-github.png">
+          <h2>By nerds, for nerds.</h2>
+          <p>Built at Twitter by <a href="http://twitter.com/mdo">@mdo</a> and <a href="http://twitter.com/fat">@fat</a>, Bootstrap utilizes <a href="http://lesscss.org">LESS CSS</a>, is compiled via <a href="http://nodejs.org">Node</a>, and is managed through <a href="http://github.com">GitHub</a> to help nerds do awesome stuff on the web.</p>
+        </div>
+        <div class="span4">
+          <img class="marketing-img" src="assets/img/bs-docs-responsive-illustrations.png">
+          <h2>Made for everyone.</h2>
+          <p>Bootstrap was made to not only look and behave great in the latest desktop browsers (as well as IE7!), but in tablet and smartphone browsers via <a href="./scaffolding.html#responsive">responsive CSS</a> as well.</p>
+        </div>
+        <div class="span4">
+          <img class="marketing-img" src="assets/img/bs-docs-bootstrap-features.png">
+          <h2>Packed with features.</h2>
+          <p>A 12-column responsive <a href="./scaffolding.html#gridSystem">grid</a>, dozens of components, <a href="./javascript.html">JavaScript plugins</a>, typography, form controls, and even a <a href="./customize.html">web-based Customizer</a> to make Bootstrap your own.</p>
+        </div>
+      </div>
+
+      <hr class="soften">
+
+      <h1>Built with Bootstrap.</h1>
+      <p class="marketing-byline">For even more sites built with Bootstrap, <a href="http://builtwithbootstrap.tumblr.com/" target="_blank">visit the unofficial Tumblr</a> or <a href="./getting-started.html#examples">browse the examples</a>.</p>
+      <div class="row-fluid">
+        <ul class="thumbnails example-sites">
+          <li class="span3">
+            <a class="thumbnail" href="http://soundready.fm/" target="_blank">
+              <img src="assets/img/example-sites/soundready.png" alt="SoundReady.fm">
             </a>
           </li>
-          <li class="nav-login"><a href="#login">Sign in</a></li>
-          <li class="nav-shopping">
-            <a id="js-shopping-toggle" href="#" class="toggle shopping-toggle-button"><span class="shopping-label">Visitor <small>New Location</small></span><span aria-hidden="true" class="icon-users hidden-phone"></span><b class="caret"></b></a>
+          <li class="span3">
+            <a class="thumbnail" href="http://kippt.com/" target="_blank">
+              <img src="assets/img/example-sites/kippt.png" alt="Kippt">
+            </a>
           </li>
-          <li class="nav-search">
-            <form class="form-search" action="http://www.regence.com/about/search.jsp" method="get" name="header-search" id="search" role="search">
-              <label for="searchQuery" class="hide">Search</label>
-              <input type="text" id="searchQuery" name="searchQuery" placeholder="Search" class="input-medium search-query">
-              <button type="submit" class="btn btn-link"><span class="icon-search" aria-hidden="true"></span><span class="visuallyhidden">Go</span></button>
-            </form>
+          <li class="span3">
+            <a class="thumbnail" href="http://www.gathercontent.com/" target="_blank">
+              <img src="assets/img/example-sites/gathercontent.png" alt="Gather Content">
+            </a>
+          </li>
+          <li class="span3">
+            <a class="thumbnail" href="http://www.jshint.com/" target="_blank">
+              <img src="assets/img/example-sites/jshint.png" alt="JS Hint">
+            </a>
           </li>
         </ul>
       </div>
-    </nav>
+    </div>
+  </div>
 
-    <!-- Masthead
-    ================================================== -->
-    <div class="jumbotron masthead">
+  <footer class="wp-footer" id="bottom" role="contentinfo" itemprop="WPFooter">
+    <div class="row-fluid">
       <div class="container">
-        <div class="caption">
-          <h1>Regence/Bootstrap</h1>
-          <p>Style guide for Regence portal web development.</p>
-          <p><a class="btn btn-primary" href="./getting-started.html">Get started<br>
-          <small>How to use this guide</small></a></p>
+        <div class="span6">
+          <p>&copy; 2013 Regence <!-- BlueCross BlueShield of Oregon. All rights reserved. --></p>
         </div>
+        <nav class="span6">
+          <ul class="nav nav-pills pull-right" role="navigation">
+            <li><a href="/legal/online-privacy-and-security/">Privacy</a></li>
+            <li><a href="/legal/terms-of-use/">Terms of Use</a></li>
+            <li><a onclick="oo_feedback.show()" href="javascript:void(0);"><span aria-hidden="true" class="icon-feedback"><b></b><i></i></span> Feedback</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
+  </footer>
 
-    <footer class="wp-footer" id="bottom" role="contentinfo" itemprop="WPFooter">
-      <div class="row-fluid">
-        <div class="container">
-          <div class="span6">
-            <p>&copy; 2013 Regence <!-- BlueCross BlueShield of Oregon. All rights reserved. --></p>
-          </div>
-          <nav class="span6">
-            <ul class="nav nav-pills pull-right" role="navigation">
-              <li><a href="/legal/online-privacy-and-security/">Privacy</a></li>
-              <li><a href="/legal/terms-of-use/">Terms of Use</a></li>
-              <li><a onclick="oo_feedback.show()" href="javascript:void(0);"><span aria-hidden="true" class="icon-feedback"><b></b><i></i></span> Feedback</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </footer>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/script.js"></script>
 
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/script.js"></script>
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
 
-    <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
-	
-  </body>
+</body>
 </html>
