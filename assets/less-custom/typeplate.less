@@ -62,7 +62,7 @@
 
 // Allows for our ampersand element to have differing
 // font-family from the ampersand unicode font-family.
-@amp-font-family: Verdana, sans-serif;
+@amp-font-family: Ampersand,Verdana,sans-serif;
 
 
 // $T y p e  S c a l e
@@ -213,13 +213,10 @@
 	font-family: @amp-font-family;
 }
 
-.ampersand-placeholder {
+.ampersand-placeholder,
+.amp {
 	.ampersand(@amp-font-family);
 }
-
-// Call your ampersand on any element you wish from another stylesheet
-// using this Sass extend we've provided...
-// @extend %ampersand-placeholder;
 
 
 
@@ -397,8 +394,9 @@ h6 { .zeta; 	.hN; }
 // $ P a r a g r a p h s
 // --------------------------------------------------------------------------
 
-p {
+.story p {
 	margin: 0 0 @indent-val;
+
 	& + p {
 		//siblings indentation
 		text-indent: @indent-val;

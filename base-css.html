@@ -27,9 +27,6 @@
   <link rel="shortcut icon" href="assets/ico/favicon.png">
 </head>
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
-  <link itemprop="audience" href="http://schema.org/Patient" />
-  <link itemprop="specialty" href="http://schema.org/PublicHealth" />
-  <meta itemprop="lastReviewed" content="2013-05-02"/>
   
   <!--[if lt IE 7]>
       <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -118,6 +115,9 @@
           <li><a href="#colors"><i class="icon-chevron-right" aria-hidden="true"></i> Colors</a></li>
           <li><a href="#webFonts"><i class="icon-chevron-right" aria-hidden="true"></i> Web Fonts</a></li>
           <li><a href="#typography"><i class="icon-chevron-right" aria-hidden="true"></i> Typography</a></li>
+          <li><a href="#typeplate"><i class="icon-chevron-right" aria-hidden="true"></i> Typeplate</a></li>
+          <li><a href="#modifiers"><i class="icon-chevron-right" aria-hidden="true"></i> Modifiers</a></li>
+          <li><a href="#lists"><i class="icon-chevron-right" aria-hidden="true"></i> Lists</a></li>
           <li><a href="#code"><i class="icon-chevron-right" aria-hidden="true"></i> Code</a></li>
           <li><a href="#tables"><i class="icon-chevron-right" aria-hidden="true"></i> Tables</a></li>
           <li><a href="#forms"><i class="icon-chevron-right" aria-hidden="true"></i> Forms</a></li>
@@ -418,7 +418,20 @@ font-family: 'NinaWeb-Bold', 'Chalkboard', 'ChalkboardSE-Regular', cursive;
             <h6>h6. Heading 6</h6>
           </div>
 
-          <h2>Links</h2>
+          <h3>Additional sizing</h3>
+          <p>When the default sizing just won't do.</p>
+          <div class="bs-docs-example">
+            <h1 class="tera">Biggest heading size</h1>
+            <h1 class="giga">Bigger heading size</h1>
+            <h1 class="mega">Big heading size</h1>
+          </div>
+<pre class="prettyprint">
+  &lt;h1 class=&quot;tera&quot;&gt;...&lt;/h1&gt;
+  &lt;h1 class=&quot;giga&quot;&gt;...&lt;/h1&gt;
+  &lt;h1 class=&quot;mega&quot;&gt;...&lt;/h1&gt;
+</pre>
+
+          <h2 id="body-links">Links</h2>
 
           <h3>Standard Links</h3>
           <p>Links to local pages and resources.</p>
@@ -431,30 +444,85 @@ font-family: 'NinaWeb-Bold', 'Chalkboard', 'ChalkboardSE-Regular', cursive;
           <div class="bs-docs-example">
             <p><a href="#" class="external">I'm an external link</a></p>
           </div>
-          <pre class="prettyprint">&lt;a class=&quot;external&quot;&gt;...&lt;/a&gt;</pre>
+<pre class="prettyprint">&lt;a class=&quot;external&quot;&gt;...&lt;/a&gt;</pre>
 
           <h2 id="body-copy">Body copy</h2>
+
           <p>Bootstrap's global default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>20px</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their line-height (10px by default).</p>
           <div class="bs-docs-example">
             <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
             <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
           </div>
-          <pre class="prettyprint">&lt;p&gt;...&lt;/p&gt;</pre>
+<pre class="prettyprint">&lt;p&gt;...&lt;/p&gt;</pre>
 
           <h3>Lead body copy</h3>
           <p>Make a paragraph stand out by adding <code>.lead</code>.</p>
           <div class="bs-docs-example">
             <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
           </div>
-          <pre class="prettyprint">&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
+<pre class="prettyprint">&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
 
           <h3>Built with Less</h3>
           <p>The typographic scale is based on two LESS variables in <strong>variables.less</strong>: <code>@baseFontSize</code> and <code>@baseLineHeight</code>. The first is the base font-size used throughout and the second is the base line-height. We use those variables and some simple math to create the margins, paddings, and line-heights of all our type and more. Customize them and Bootstrap adapts.</p>
+        </section>
 
 
-          <hr class="bs-docs-separator">
 
+        <!-- Typeplate
+        ================================================== -->
+        <section id="typeplate">
+          <div class="page-header">
+            <h1>Typography <small>defined by <a href="http://typeplate.com">Typeplate</a></small></h1>
+          </div>
+
+          <h3>Word wrap</h3>
+          <dl class="lining">
+            <dt>Normal</dt>
+            <dd>Indicates that lines may only break at normal word break points.</dd>
+            <dt>Break-word</dt>
+            <dd>Indicates that normally unbreakable words may be broken at arbitrary points if there are no otherwise acceptable break points in the line.</dd>
+          </dl>
+          <div class="bs-docs-example">
+            <div class="row-fluid">
+              <div class="span6">
+                <p class="breakword lead">ThisIsOneReallyLongWordThatWouldn'tNormallyBreak. This line will-break-at-hyphenates.</p>
+                <p class="normal-wrap lead">ThisIsOneReallyLongWordThatWouldn'tNormallyBreak. This line will-break-at-hyphenates.</p>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint">
+  &lt;p class="breakword"&gt;...&lt;/p&gt;
+  &lt;p class="normal-wrap"&gt;...&lt;/p&gt;
+</pre>
+
+          <h3>Drop cap</h3>
+          <p>When the first letter of a paragraph is significantly larger so that it occupies two or more lines.</p>
+          <div class="bs-docs-example">
+            <p class="drop-cap">There now is your insular city of the Manhattoes, belted round by wharves as Indian isles by coral reefs&mdash;commerce surrounds it with her surf. Right and left, the streets take you waterward. Its extreme downtown is the battery, where that noble mole is washed by waves, and cooled by breezes, which a few hours previous were out of sight of land. Look at the crowds of water-gazers there.</p>
+          </div>
+<pre class="prettyprint">
+  &lt;p class="drop-cap"&gt;...&lt;/p&gt;
+</pre>
+
+          <h3>Unicode Ampersands</h3>
+          <p>With the unicode-range property we can avoid using verbose markup and only target the characters we like according to the unicode unique identifier. </p>
+          <div class="bs-docs-example bs-docs-example-amp">
+            <p class="amp">Amper &amp; Sands</p>
+          </div>
+<pre class="prettyprint">
+  &lt;p class="amp"&gt;Amper &amp; Sands&lt;/p&gt;
+</pre>
+        </section>
+
+
+
+        <!-- Modifiers
+        ================================================== -->
+        <section id="modifiers">
+          <div class="page-header">
+            <h1>Modifiers</h1>
+          </div>
 
           <h2 id="emphasis">Emphasis</h2>
           <p>Make use of HTML's default emphasis tags with lightweight styles.</p>
@@ -537,9 +605,7 @@ font-family: 'NinaWeb-Bold', 'Chalkboard', 'ChalkboardSE-Regular', cursive;
           </div>
           <pre class="prettyprint">&lt;abbr title="HyperText Markup Language" class="initialism"&gt;HTML&lt;/abbr&gt;</pre>
 
-
           <hr class="bs-docs-separator">
-
 
           <h2 id="addresses">Addresses</h2>
           <p>Present contact information for the nearest ancestor or the entire body of work.</p>
@@ -572,9 +638,7 @@ font-family: 'NinaWeb-Bold', 'Chalkboard', 'ChalkboardSE-Regular', cursive;
 &lt;/address&gt;
 </pre>
 
-
           <hr class="bs-docs-separator">
-
 
           <h2 id="blockquotes">Blockquotes</h2>
           <p>For quoting blocks of content from another source within your document.</p>
@@ -610,6 +674,19 @@ font-family: 'NinaWeb-Bold', 'Chalkboard', 'ChalkboardSE-Regular', cursive;
 &lt;/blockquote&gt;
 </pre>
 
+          <div class="bs-docs-example">
+            <blockquote cite="http://where-i-got-my-info-from.com">
+              <p>“Embracing the fluid &amp; flexible aspect of responsive web design was an easy decision, but I’ve been less sure-footed when it comes to balancing that with setting type on the web”</p>
+              <cite><small><a href="http://trentwalton.com/2012/06/19/fluid-type">Trent Walton</a></small></cite>
+            </blockquote>
+          </div>
+<pre class="prettyprint linenums">
+&lt;blockquote cite="..."&gt;
+  &lt;p&gt;“...”&lt;/p&gt;
+  &lt;cite&gt;&lt;small&gt;&lt;a href="..."&gt;...&lt;/a&gt;&lt;/small&gt;&lt;/cite&gt;
+&lt;/blockquote&gt;
+</pre>
+
           <h4>Alternate displays</h4>
           <p>Use <code>.pull-right</code> for a floated, right-aligned blockquote.</p>
           <div class="bs-docs-example" style="overflow: hidden;">
@@ -624,12 +701,61 @@ font-family: 'NinaWeb-Bold', 'Chalkboard', 'ChalkboardSE-Regular', cursive;
 &lt;/blockquote&gt;
 </pre>
 
+          <h4>Pull quotes</h4>
+          <p>Pull Quotes are tricky, but with this little ditty they’re not so difficult or tedious anymore. The example is an improvement based upon the <a href="http://24ways.org/2005/swooshy-curly-quotes-without-images">24 ways article discussing swooshy curly quotes without images</a>. This particular example depicted takes advantage of psuedo selectors and the <code>&lt;aside&gt;</code> tag.</p>
+          <div class="bs-docs-example">
+            <aside class="pull-quote">
+              <blockquote>
+                <p>Most people who use Helvetica, use it because it's ubiquitous. It's like going to McDonald's instead of thinking about food. Because it's there, it's on every street corner, so let's eat crap because it's on the corner.</p>
+              </blockquote>
+            </aside>
+          </div>
+<pre class="prettyprint linenums">
+&lt;blockquote class="pull-quote"&gt;
+  &lt;blockquote&gt;
+    ...
+  &lt;/blockquote&gt;
+&lt;/aside&gt;
+</pre>
 
           <hr class="bs-docs-separator">
 
+          <h2 id="footnotes">Footnotes</h2>
+          <div class="bs-docs-example">
+            <article>
+              <p>The sites we’ve built to display on a desktop, smartphone, or a tablet today could be on a TV Screen, coffee table display, or mega space yacht projection system tomorrow. Do yourself a favor and heed the advice of the Dao: A fully-scalable web<sup><a id="fn-return" href="#fn-item1">1</a></sup></p>
+              <footer class="foot-note">
+                <ol>
+                  <li id="fn-item1">Style sheets that use relative units can more easily scale from one output environment to another. Most of the time I use em and rem. <a href="#fn-return">↩</a>
+                  </li>
+                </ol>
+              </footer>
+            </article>
+          </div>
+<pre class="prettyprint linenums">
+&lt;article&gt;
+  &lt;p&gt;...&lt;sup&gt;&lt;a id="fn-return" href="#fn-item1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+  &lt;footer class="foot-note"&gt;
+    &lt;ol&gt;
+      &lt;li id="fn-item1"&gt;...
+        &lt;pa href="#fn-return"&gt;&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;
+</pre>
+        </section>
 
-          <!-- Lists -->
-          <h2 id="lists">Lists</h2>
+
+
+        <!-- Lists
+        ================================================== -->
+        <section id="lists">
+          <div class="page-header">
+            <h1>Lists</h1>
+          </div>
+
+          <h2 id="lists">Unordered and ordered lists</h2>
 
           <h3>Unordered</h3>
           <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
@@ -678,61 +804,108 @@ font-family: 'NinaWeb-Bold', 'Chalkboard', 'ChalkboardSE-Regular', cursive;
 &lt;/ol&gt;
 </pre>
 
-        <h3>Unstyled</h3>
-        <p>Remove the default <code>list-style</code> and left padding on list items (immediate children only).</p>
-        <div class="bs-docs-example">
-          <ul class="unstyled">
-            <li>Lorem ipsum dolor sit amet</li>
-            <li>Consectetur adipiscing elit</li>
-            <li>Integer molestie lorem at massa</li>
-            <li>Facilisis in pretium nisl aliquet</li>
-            <li>Nulla volutpat aliquam velit
-              <ul>
-                <li>Phasellus iaculis neque</li>
-                <li>Purus sodales ultricies</li>
-                <li>Vestibulum laoreet porttitor sem</li>
-                <li>Ac tristique libero volutpat at</li>
-              </ul>
-            </li>
-            <li>Faucibus porta lacus fringilla vel</li>
-            <li>Aenean sit amet erat nunc</li>
-            <li>Eget porttitor lorem</li>
-          </ul>
-        </div>
+          <h3>Unstyled</h3>
+          <p>Remove the default <code>list-style</code> and left padding on list items (immediate children only).</p>
+          <div class="bs-docs-example">
+            <ul class="unstyled">
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Integer molestie lorem at massa</li>
+              <li>Facilisis in pretium nisl aliquet</li>
+              <li>Nulla volutpat aliquam velit
+                <ul>
+                  <li>Phasellus iaculis neque</li>
+                  <li>Purus sodales ultricies</li>
+                  <li>Vestibulum laoreet porttitor sem</li>
+                  <li>Ac tristique libero volutpat at</li>
+                </ul>
+              </li>
+              <li>Faucibus porta lacus fringilla vel</li>
+              <li>Aenean sit amet erat nunc</li>
+              <li>Eget porttitor lorem</li>
+            </ul>
+          </div>
 <pre class="prettyprint linenums">
 &lt;ul class="unstyled"&gt;
   &lt;li&gt;...&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
-        <h3>Inline</h3>
-        <p>Place all list items on a single line with <code>inline-block</code> and some light padding.</p>
-        <div class="bs-docs-example">
-          <ul class="inline">
-            <li>Lorem ipsum</li>
-            <li>Phasellus iaculis</li>
-            <li>Nulla volutpat</li>
-          </ul>
-        </div>
+          <h3>Bulleted</h3>
+          <p>A list of items with brand specific bullets.</p>
+          <div class="bs-docs-example">
+            <ul class="bulleted">
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Integer molestie lorem at massa</li>
+              <li>Facilisis in pretium nisl aliquet</li>
+              <li>Nulla volutpat aliquam velit
+                <ul>
+                  <li>Phasellus iaculis neque</li>
+                  <li>Purus sodales ultricies</li>
+                  <li>Vestibulum laoreet porttitor sem</li>
+                  <li>Ac tristique libero volutpat at</li>
+                </ul>
+              </li>
+              <li>Faucibus porta lacus fringilla vel</li>
+              <li>Aenean sit amet erat nunc</li>
+              <li>Eget porttitor lorem</li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="bulleted"&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h3>Inline</h3>
+          <p>Place all list items on a single line with <code>inline-block</code> and some light padding.</p>
+          <div class="bs-docs-example">
+            <ul class="inline">
+              <li>Lorem ipsum</li>
+              <li>Phasellus iaculis</li>
+              <li>Nulla volutpat</li>
+            </ul>
+          </div>
 <pre class="prettyprint linenums">
 &lt;ul class="inline"&gt;
   &lt;li&gt;...&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
-        <h3>Description</h3>
-        <p>A list of terms with their associated descriptions.</p>
-        <div class="bs-docs-example">
-          <dl>
-            <dt>Description lists</dt>
-            <dd>A description list is perfect for defining terms.</dd>
-            <dt>Euismod</dt>
-            <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-            <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-            <dt>Malesuada porta</dt>
-            <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-          </dl>
-        </div>
+          <h3>Stats</h3>
+          <div class="bs-docs-example">
+            <ul class="stats-tabs">
+              <li><a href="#">1,234 <b>Stratocasters</b></a></li>
+              <li><a href="#">567 <b>Acoustic</b></a></li>
+              <li><a href="#">23,456 <b>Banjo</b></a></li>
+              <li><a href="#">3,456 <b>Dulcimer</b></a></li>
+              <li><a href="#">456 <b>Ukes</b></a></li>
+              <li><a href="#">26 <b>Bass Guitar</b></a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="stats-tabs"&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+    
+          <h2>Definition lists</h2>
+
+          <h3>Description</h3>
+          <p>A list of terms with their associated descriptions.</p>
+          <div class="bs-docs-example">
+            <dl>
+              <dt>Description lists</dt>
+              <dd>A description list is perfect for defining terms.</dd>
+              <dt>Euismod</dt>
+              <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+              <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+              <dt>Malesuada porta</dt>
+              <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+            </dl>
+          </div>
 <pre class="prettyprint linenums">
 &lt;dl&gt;
   &lt;dt&gt;...&lt;/dt&gt;
@@ -740,32 +913,73 @@ font-family: 'NinaWeb-Bold', 'Chalkboard', 'ChalkboardSE-Regular', cursive;
 &lt;/dl&gt;
 </pre>
 
-        <h4>Horizontal description</h4>
-        <p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side.</p>
-        <div class="bs-docs-example">
-          <dl class="dl-horizontal">
-            <dt>Description lists</dt>
-            <dd>A description list is perfect for defining terms.</dd>
-            <dt>Euismod</dt>
-            <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-            <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-            <dt>Malesuada porta</dt>
-            <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-            <dt>Felis euismod semper eget lacinia</dt>
-            <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
-          </dl>
-        </div>
+          <h4>Horizontal description</h4>
+          <p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side.</p>
+          <div class="bs-docs-example">
+            <dl class="dl-horizontal">
+              <dt>Description lists</dt>
+              <dd>A description list is perfect for defining terms.</dd>
+              <dt>Euismod</dt>
+              <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+              <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+              <dt>Malesuada porta</dt>
+              <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+              <dt>Felis euismod semper eget lacinia</dt>
+              <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+            </dl>
+          </div>
 <pre class="prettyprint linenums">
 &lt;dl class="dl-horizontal"&gt;
   &lt;dt&gt;...&lt;/dt&gt;
   &lt;dd&gt;...&lt;/dd&gt;
 &lt;/dl&gt;
 </pre>
-        <p>
-          <span class="label label-info">Heads up!</span>
-          Horizontal description lists will truncate terms that are too long to fit in the left column fix <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.
-        </p>
-      </section>
+          <p><span class="label label-info">Heads up!</span> Horizontal description lists will truncate terms that are too long to fit in the left column fix <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.</p>
+
+          <h4>Inline</h4>
+          <p>Make definitions follow terms in a single line.</p>
+          <div class="bs-docs-example">
+            <dl class="lining">
+              <dt>Description lists</dt>
+              <dd>A description list is perfect for defining terms.</dd>
+              <dt>Euismod</dt>
+              <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+              <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+              <dt>Malesuada porta</dt>
+              <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+              <dt>Felis euismod semper eget lacinia</dt>
+              <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+            </dl>
+          </div>
+<pre class="prettyprint linenums">
+&lt;dl class="inline"&gt;
+  &lt;dt&gt;...&lt;/dt&gt;
+  &lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+
+          <h4>Dictionary</h4>
+          <p>For terms with multiple definitions.</p>
+          <div class="bs-docs-example">
+            <dl class="dictionary-style">
+              <dt>Description lists</dt>
+              <dd>A description list is perfect for defining terms.</dd>
+              <dt>Euismod</dt>
+              <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+              <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+              <dt>Malesuada porta</dt>
+              <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+              <dt>Felis euismod semper eget lacinia</dt>
+              <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+            </dl>
+          </div>
+<pre class="prettyprint linenums">
+&lt;dl class="dictionary"&gt;
+  &lt;dt&gt;...&lt;/dt&gt;
+  &lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+        </section>
 
 
 
@@ -2175,7 +2389,21 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
 </pre>
           <p><span class="label label-info">Heads up!</span> <code>.img-rounded</code> and <code>.img-circle</code> do not work in IE7-8 due to lack of <code>border-radius</code> support.</p>
 
-
+          <div class="bs-docs-example">
+            <figure>
+              <img src="http://designingfortheweb.co.uk/book/images/typography-anatomy_b.gif">
+              <figcaption class="example-figcaption">
+                <strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton’s book <cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">“Designing for the Web”</cite>
+              </figcaption>
+            </figure>
+<pre class="prettyprint linenums">
+&lt;figure&gt;
+&lt;img src="..."&gt;
+  &lt;figcaption&gt;
+    &lt;strong&gt;Fig. 4.2 | &lt;/strong&gt;...&lt;/cite&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+</pre>
         </section>
 
 

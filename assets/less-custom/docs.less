@@ -105,7 +105,7 @@ hr.soften {
   background: @brandDarker; /* Old browsers */  
   #gradient > .directional(@brandDarker, @purple, 45deg);
   .box-shadow(~"inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2)");
-  padding: 40px 0;
+  padding: 2.5rem 0 1.75rem;
   position: relative;
 
   h1 {
@@ -119,6 +119,7 @@ hr.soften {
     small {
       color: @grayLight;
       color: rgba(255,255,255,.8);
+      display: block;
       font-size: 18px;
     }
   }
@@ -133,15 +134,7 @@ hr.soften {
   height: 450px;
 
   h1 {
-    font-size: 64px;
     letter-spacing: -1px;
-    line-height: 1;
-  }
-  p {
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 1.25;
-    margin-bottom: 30px;
   }
   .caption {
     background: rgba(255,255,255, .5); /* Old browsers */
@@ -243,7 +236,6 @@ hr.soften {
 
   h1 {
     color: @white;
-    font-size: 60px;
   }
   p {
     color: @white;
@@ -569,6 +561,18 @@ form.bs-docs-example {
     font-size: 24px;
     line-height: 28px;
     margin-bottom: 10px;
+  }
+}
+
+/* Amp */
+.bs-docs-example-amp {
+  
+  .amp {
+    font-size: 3em;
+    line-height: 1;
+    margin-top: -0.5em;
+    padding: 0;
+    text-align: center;
   }
 }
 
