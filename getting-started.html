@@ -87,13 +87,13 @@
         </li>
         <li class="nav-login"><a href="#login">Sign in</a></li>
         <li class="nav-shopping">
-          <a id="js-shopping-toggle" href="#" class="toggle shopping-toggle-button"><span class="shopping-label">Visitor <small>New Location</small></span><span aria-hidden="true" class="icon-users hidden-phone"></span><b class="caret"></b></a>
+          <a id="js-shopping-toggle" href="#" class="toggle shopping-toggle-button"><span class="shopping-label">Visitor <small>New Location</small></span><span aria-hidden="true" class="glyph-users hidden-phone"></span><b class="caret"></b></a>
         </li>
         <li class="nav-search">
           <form class="form-search" action="http://www.regence.com/about/search.jsp" method="get" name="header-search" id="search" role="search">
             <label for="searchQuery" class="hide">Search</label>
             <input type="text" id="searchQuery" name="searchQuery" placeholder="Search" class="input-medium search-query">
-            <button type="submit" class="btn btn-link"><span class="icon-search" aria-hidden="true"></span><span class="visuallyhidden">Go</span></button>
+            <button type="submit" class="btn btn-link"><span class="glyph-search" aria-hidden="true"></span><span class="visuallyhidden">Go</span></button>
           </form>
         </li>
       </ul>
@@ -119,7 +119,7 @@
           <li class=""><a href="#download-bootstrap"><i class="icon-chevron-right"></i> Download</a></li>
           <li class=""><a href="#file-structure"><i class="icon-chevron-right"></i> File structure</a></li>
           <li class=""><a href="#contents"><i class="icon-chevron-right"></i> What's included</a></li>
-          <li class=""><a href="#html-template"><i class="icon-chevron-right"></i> HTML template</a></li>
+          <li class=""><a href="#liferay-theme"><i class="icon-chevron-right"></i> Liferay Theme</a></li>
           <li class=""><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
           <li class="active"><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li>
         </ul>
@@ -135,19 +135,8 @@
             <h1>1. Download</h1>
           </div>
           <p class="lead">Before downloading, be sure to have Liferay Developer Studio, or a similar <abbr title="Integrated Development Environment" class="initialism">IDE</abbr>, and some working knowledge of HTML and CSS.</p>
-
-          <div class="row-fluid">
-            <div class="span6">
-              <h2>Download package</h2>
-              <p>Get the theme, layouts, plugins, and sample content. This is the easiest way to get started.</p>
-              <p><a onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);" href="https://github.com/twitter/bootstrap/zipball/master" class="btn btn-large btn-primary">Download all files</a></p>
-            </div>
-            <div class="span6">
-              <h2>Download theme</h2>
-              <p><strong>Basic:</strong> get just the theme files. No docs or support files.</p>
-              <p><a onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" href="assets/bootstrap.zip" class="btn btn-large">Download theme only</a></p>
-            </div>
-          </div>
+          <p>Get the theme, layouts, plugins, and sample content. This is the easiest way to get started.</p>
+          <p><a onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);" href="https://github.com/twitter/bootstrap/zipball/master" class="btn btn-large btn-primary">Download zip</a></p>
         </section>
 
 
@@ -169,8 +158,7 @@
   </span><span class="pun">├──</span><span class="pln"> _less</span><span class="pun">/</span><span class="pln">
   </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> [Custom preprocessed CSS files]
   </span><span class="pun">└──</span><span class="pln"> color_schemes</span><span class="pun">/</span><span class="pln">
-  </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> asuris</span><span class="pun">.</span><span class="pln">css
-  </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> regence</span><span class="pun">.</span><span class="pln">css
+  </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> [Custom alternate CSS theme files]
   </span><span class="pun">└──</span><span class="pln"> css</span><span class="pun">/</span><span class="pln">
   </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> [Liferay and Custom styles]
   </span><span class="pun">├──</span><span class="pln"> documents</span><span class="pun">/</span><span class="pln">
@@ -193,56 +181,29 @@
           <div class="page-header">
             <h1>3. What's included</h1>
           </div>
-          <p class="lead">Bootstrap comes equipped with HTML, CSS, and JS for all sorts of things, but they can be summarized with a handful of categories visible at the top of the <a href="http://getbootstrap.com">Bootstrap documentation</a>.</p>
+          <p class="lead">This Liferay theme includes Twitter Bootstrap. The framework can be summarized with a handful of categories visible at the top of the page.</p>
 
           <h2>Docs sections</h2>
-          <h4><a href="http://twitter.github.com/bootstrap/scaffolding.html">Scaffolding</a></h4>
+          <h4><a href="layout.html">Scaffolding</a></h4>
           <p>Global styles for the body to reset type and background, link styles, grid system, and two simple layouts.</p>
-          <h4><a href="http://twitter.github.com/bootstrap/base-css.html">Base CSS</a></h4>
+          <h4><a href="base-css.html">Base CSS</a></h4>
           <p>Styles for common HTML elements like typography, code, tables, forms, and buttons. Also includes <a href="http://glyphicons.com">Glyphicons</a>, a great little icon set.</p>
-          <h4><a href="http://twitter.github.com/bootstrap/components.html">Components</a></h4>
+          <h4><a href="components.html">Components</a></h4>
           <p>Basic styles for common interface components like tabs and pills, navbar, alerts, page headers, and more.</p>
-          <h4><a href="http://twitter.github.com/bootstrap/javascript.html">JavaScript plugins</a></h4>
+          <h4><a href="javascript.html">JavaScript plugins</a></h4>
           <p>Similar to Components, these JavaScript plugins are interactive components for things like tooltips, popovers, modals, and more.</p>
-
-          <h2>List of components</h2>
-          <p>Together, the <strong>Components</strong> and <strong>JavaScript plugins</strong> sections provide the following interface elements:</p>
-          <ul>
-            <li>Button groups</li>
-            <li>Button dropdowns</li>
-            <li>Navigational tabs, pills, and lists</li>
-            <li>Navbar</li>
-            <li>Labels</li>
-            <li>Badges</li>
-            <li>Page headers and hero unit</li>
-            <li>Thumbnails</li>
-            <li>Alerts</li>
-            <li>Progress bars</li>
-            <li>Modals</li>
-            <li>Dropdowns</li>
-            <li>Tooltips</li>
-            <li>Popovers</li>
-            <li>Accordion</li>
-            <li>Carousel</li>
-            <li>Typeahead</li>
-          </ul>
-          <p>In future guides, we may walk through these components individually in more detail. Until then, look for each of these in the documentation for information on how to utilize and customize them.</p>
         </section>
 
 
 
-        <!-- HTML template
+        <!-- Creating a Liferay theme
         ================================================== -->
-        <section id="html-template">
+        <section id="liferay-theme">
           <div class="page-header">
-            <h1>4. Basic HTML template</h1>
+            <h1>4. How to create a Liferay theme</h1>
           </div>
-          <p class="lead">With a brief intro into the contents out of the way, we can focus on putting Bootstrap to use. To do that, we'll utilize a basic HTML template that includes everything we mentioned in the <a href="./getting-started.html#file-structure">File structure</a>.</p>
-          <p>Now, here's a look at a <strong>typical HTML file</strong>:</p>
-<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="dec">&lt;!DOCTYPE html&gt;</span></li><li class="L1"><span class="tag">&lt;html&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;head&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;title&gt;</span><span class="pln">Bootstrap 101 Template</span><span class="tag">&lt;/title&gt;</span></li><li class="L4"><span class="pln">    </span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"viewport"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">  </span><span class="tag">&lt;/head&gt;</span></li><li class="L6"><span class="pln">  </span><span class="tag">&lt;body&gt;</span></li><li class="L7"><span class="pln">    </span><span class="tag">&lt;h1&gt;</span><span class="pln">Hello, world!</span><span class="tag">&lt;/h1&gt;</span></li><li class="L8"><span class="pln">    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv"><span>"<a href="http://code.jquery.com/jquery.js">http://code.jquery.com/jquery.js</a>"</span></span><span class="tag">&gt;&lt;/script&gt;</span></li><li class="L9"><span class="pln">  </span><span class="tag">&lt;/body&gt;</span></li><li class="L0"><span class="tag">&lt;/html&gt;</span></li></ol></pre>
-          <p>To make this <strong>a Bootstrapped template</strong>, just include the appropriate CSS and JS files:</p>
-<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="dec">&lt;!DOCTYPE html&gt;</span></li><li class="L1"><span class="tag">&lt;html&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;head&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;title&gt;</span><span class="pln">Bootstrap 101 Template</span><span class="tag">&lt;/title&gt;</span></li><li class="L4"><span class="pln">    </span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"viewport"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">    </span><span class="com">&lt;!-- Bootstrap --&gt;</span></li><li class="L6"><span class="pln">    </span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"css/bootstrap.min.css"</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="atn">media</span><span class="pun">=</span><span class="atv">"screen"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">  </span><span class="tag">&lt;/head&gt;</span></li><li class="L8"><span class="pln">  </span><span class="tag">&lt;body&gt;</span></li><li class="L9"><span class="pln">    </span><span class="tag">&lt;h1&gt;</span><span class="pln">Hello, world!</span><span class="tag">&lt;/h1&gt;</span></li><li class="L0"><span class="pln">    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv"><span>"<a href="http://code.jquery.com/jquery.js">http://code.jquery.com/jquery.js</a>"</span></span><span class="tag">&gt;&lt;/script&gt;</span></li><li class="L1"><span class="pln">    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"js/bootstrap.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;/body&gt;</span></li><li class="L3"><span class="tag">&lt;/html&gt;</span></li></ol></pre>
-          <p><strong>And you're set!</strong> With those two files added, you can begin to develop any site or application with Bootstrap.</p>
+          <p class="lead">With a brief intro into the contents out of the way, we can focus on how to integrate with Liferay. To do that, we'll have to create a Liferay theme.</p>
+          <p>The process for creating a new theme is nearly identical to the one for making a portlet. You will need both a project name (without spaces) and a display name (which can have spaces). For example, the project name could be deep-blue, and the theme title Deep Blue. We will show two ways to accomplish this. First, we will demonstrate by using Liferay Developer Studio.</p>
         </section>
 
 

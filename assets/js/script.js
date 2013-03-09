@@ -57,7 +57,7 @@ $(function() {
   $('a.external').on('click', function(){
     window.open(this.href, '_blank');
     return false;
-  }).append('&nbsp;<span class="icon-external" aria-hidden="true"></span>');
+  }).append('&nbsp;<span class="glyph-external" aria-hidden="true"></span>');
 
   // Activate Tooltips
   $('.tooltip-container').tooltip({

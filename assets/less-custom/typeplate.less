@@ -368,7 +368,6 @@ body {
 	text-rendering: optimizeLegibility;
 	// this fixes huge spaces when a heading wraps onto two lines
 	line-height: 1;
-	margin-top: 0;
 }
 
 // for each size in the scale, create a class
@@ -394,14 +393,13 @@ h6 { .zeta; 	.hN; }
 // $ P a r a g r a p h s
 // --------------------------------------------------------------------------
 
-.story p {
+p {
 	margin: 0 0 @indent-val;
-
-	& + p {
-		//siblings indentation
-		text-indent: @indent-val;
-		margin-top: -@indent-val;
-	}
+}
+.story p + p {
+	//siblings indentation
+	text-indent: @indent-val;
+	margin-top: -@indent-val;
 }
 
 
@@ -465,6 +463,7 @@ code {
  */
 abbr {
 	.smallcaps(gray, 600);
+
 	&:hover {
 		cursor: help;
 	}
