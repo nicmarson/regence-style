@@ -558,10 +558,7 @@ ul.bulleted > li {
 .modal-footer {
   padding: 19px 15px 20px;
 }
-figure {
-  display: inline-block;
-}
-figure figcaption {
+figcaption {
   padding: 5px 1px;
 }
 /* ==========================================================================
@@ -838,6 +835,94 @@ figure figcaption {
 .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle .caret {
   border-top-color: #ffffff;
   border-bottom-color: #ffffff;
+}
+/* http://acidmartin.wordpress.com/2011/09/26/css3-treevew-no-javascript/ */
+.nav-treeview {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.nav-treeview ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-treeview ul li {
+  background: #F5F5F5;
+  padding: 2px 8px;
+}
+.nav-treeview input {
+  opacity: 0;
+  position: absolute;
+}
+.nav-treeview input + label + ul li {
+  border-top: 1px dotted #999999;
+  padding-left: 22px;
+}
+.nav-treeview input + label + ul li:hover {
+  background: #ffffff;
+}
+.nav-treeview input ~ ul {
+  display: none;
+}
+.nav-treeview a,
+.nav-treeview label,
+.nav-treeview label:before {
+  display: inline-block;
+  font-size: 14px;
+  height: 20px;
+  line-height: 20px;
+  vertical-align: middle;
+}
+.nav-treeview label,
+.nav-treeview label:before {
+  cursor: pointer;
+}
+.nav-treeview label {
+  margin-top: 0;
+}
+.nav-treeview label:before {
+  content: "\f0c1";
+  font-family: 'icomoon';
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  margin-right: 2px;
+  margin-top: 5px;
+  speak: none;
+  vertical-align: middle;
+  width: 16px;
+}
+.nav-treeview label.branch:before {
+  content: "\f07b";
+  margin-right: 4px;
+  margin-top: 2px;
+}
+.nav-treeview input:checked + label.branch:before {
+  content: "\f07c";
+}
+.nav-treeview input:disabled + label {
+  cursor: default;
+  opacity: .6;
+}
+.nav-treeview input:checked:not(:disabled) ~ ul {
+  display: block;
+}
+/* webkit adjacent element selector bugfix */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .nav-treeview {
+    -webkit-animation: webkit-adjacent-element-selector-bugfix infinite 1s;
+  }
+  @-webkit-keyframes webkit-adjacent-element-selector-bugfix {
+    from {
+      padding: 0;
+    }
+    to {
+      padding: 0;
+    }
+  }
 }
 .nav-articles {
   margin-top: 20px;
@@ -1488,9 +1573,796 @@ table.contact-info td.contact-info-entry {
   margin-left: 34px;
   padding: 9px 0 0;
 }
-.main {
-  background-color: #EFF5F7;
-  color: #333333;
+/*------------------------------------*\
+    $SHIM
+\*------------------------------------*/
+.flashblocker-assumed {
+  min-height: 20px;
+  min-width: 20px;
+}
+.cue-display {
+  position: absolute !important;
+  margin: 0;
+  padding: 0px !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  border: none !important;
+  background: none !important;
+  text-align: center;
+  visibility: hidden;
+  font-family: sans-serif;
+  font-size: 12px;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+.cue-display b {
+  font-weight: bold;
+}
+.cue-display i {
+  font-style: italic;
+}
+.cue-display u {
+  text-decoration: underline;
+}
+.cue-display span.cue-wrapper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 160%;
+  color: #fff;
+  visibility: visible !important;
+}
+.cue-display span.cue {
+  display: inline-block;
+  padding: 3px 5px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+.cue-display .description-cues {
+  position: absolute;
+  top: -99px;
+  left: -99px;
+  display: block;
+  width: 5px;
+  height: 5px;
+  overflow: hidden;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+/*------------------------------------*\
+    $SHIM-RESET
+\*------------------------------------*/
+.input-range .ui-slider-range,
+.placeholder-box,
+.placeholder-text,
+.input-datetime-local,
+.step-controls,
+.step-controls span,
+.input-range,
+.input-range .ui-slider-handle,
+.input-range .ui-slider-range,
+.details-open-indicator {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: auto;
+  background: transparent none;
+}
+output {
+  position: relative;
+}
+.webshims-visual-hide {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+.webshims-visual-hide * {
+  visibility: hidden !important;
+}
+/*------------------------------------*\
+    $PLACEHOLDER
+\*------------------------------------*/
+.placeholder-box {
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+}
+.polyfill-important .placeholder-box {
+  position: relative !important;
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+  height: auto !important;
+}
+.placeholder-box-input {
+  vertical-align: bottom;
+}
+.placeholder-box-left {
+  float: left;
+}
+.placeholder-box-right {
+  float: right;
+}
+.placeholder-text {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: #999;
+  line-height: 1;
+  cursor: text;
+}
+.polyfill-important .placeholder-text {
+  margin: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  display: none !important;
+}
+.placeholder-box-input .placeholder-text {
+  white-space: nowrap;
+}
+.placeholder-visible {
+  color: #999;
+}
+.placeholder-visible .placeholder-text,
+.placeholder-text.placeholder-visible {
+  display: inline-block;
+}
+.placeholder-focused.placeholder-visible {
+  color: #ccc;
+}
+.polyfill-important .placeholder-visible .placeholder-text,
+.polyfill-important .placeholder-text.placeholder-visible {
+  display: inline-block !important;
+}
+/*------------------------------------*\
+    $DATETIME-LOCAL
+\*------------------------------------*/
+.input-datetime-local {
+  display: inline-block;
+  zoom: 1;
+  vertical-align: middle;
+}
+.polyfill-important .input-datetime-local {
+  display: inline-block !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+.polyfill-important .input-datetime-local input {
+  display: inline !important;
+}
+.input-datetime-local-date {
+  margin: 0 2px 0 0;
+}
+.polyfill-important .input-datetime-local-date {
+  margin: 0 2px 0 0 !important;
+}
+.input-datetime-local-time {
+  margin: 0 0 0 2px;
+}
+.polyfill-important .input-datetime-local-time {
+  margin: 0 0 0 2px !important;
+}
+img.ui-datepicker-trigger {
+  display: inline;
+  display: inline-block;
+  width: 16px;
+}
+/* spinner control for time, number (usable for date, datetime-local) */
+.has-step-controls {
+  display: inline;
+}
+.polyfill-important .has-step-controls {
+  display: inline !important;
+}
+.step-controls {
+  position: relative;
+  zoom: 1;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 0;
+  vertical-align: middle;
+  vertical-align: top;
+  margin-left: -17px;
+  height: 19px;
+  width: 15px;
+}
+.polyfill-important .step-controls {
+  display: inline-block !important;
+  padding: 0 !important;
+  vertical-align: top !important;
+}
+.step-controls span {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 15px;
+  height: 9px;
+  cursor: pointer;
+  font-size: 0;
+  line-height: 0;
+  background: url(../images/forms/forms.png) no-repeat 0 0;
+}
+.polyfill-important .step-controls span {
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+}
+.step-controls span.step-up {
+  top: 0;
+  background-position: -80px 0;
+}
+.step-controls span.step-up:hover {
+  background-position: -105px 0;
+}
+.step-controls > span.mousepress-ui.step-up {
+  background-position: -105px -20px;
+}
+.step-controls span.step-down {
+  bottom: 0;
+  background-position: -155px 0;
+}
+.step-controls span.step-down:hover {
+  background-position: -180px 0;
+}
+.step-controls > span.mousepress-ui.step-down {
+  background-position: -180px -20px;
+}
+/* disabled or readonly */
+.step-controls.disabled-step-control span {
+  opacity: 0.95;
+  cursor: default;
+}
+.step-controls.disabled-step-control span.step-up {
+  background-position: -130px 0;
+}
+.step-controls.disabled-step-control span.step-down {
+  background-position: -205px 0;
+}
+/*------------------------------------*\
+    $RANGE
+\*------------------------------------*/
+.input-range {
+  background: #dddddd;
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0;
+  height: 9px;
+  line-height: 0;
+  margin: 5px 0;
+  position: relative;
+  vertical-align: middle;
+  width: 155px;
+  zoom: 1;
+}
+.polyfill-important .input-range {
+  display: inline-block !important;
+  font-size: 0 !important;
+  padding: 0 !important;
+}
+.input-range .ui-slider-handle {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #0758a5;
+  background-image: -moz-linear-gradient(top, #076da5, #0738a5);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#076da5), to(#0738a5));
+  background-image: -webkit-linear-gradient(top, #076da5, #0738a5);
+  background-image: -o-linear-gradient(top, #076da5, #0738a5);
+  background-image: linear-gradient(to bottom, #076da5, #0738a5);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff076da5', endColorstr='#ff0738a5', GradientType=0);
+  border-color: #0738a5 #0738a5 #041f5c;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #0738a5;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 -9px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 -9px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 -9px 1px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  display: block;
+  font-size: 0;
+  height: 20px;
+  line-height: 0;
+  margin: -6px 0 0 -6px;
+  outline: none;
+  overflow: hidden;
+  top: 0;
+  position: absolute;
+  width: 12px;
+  z-index: 4;
+}
+.input-range .ui-slider-handle:hover,
+.input-range .ui-slider-handle:focus,
+.input-range .ui-slider-handle:active,
+.input-range .ui-slider-handle.active,
+.input-range .ui-slider-handle.disabled,
+.input-range .ui-slider-handle[disabled] {
+  color: #ffffff;
+  background-color: #0738a5;
+  *background-color: #06308d;
+}
+.input-range .ui-slider-handle:active,
+.input-range .ui-slider-handle.active {
+  background-color: #052874 \9;
+}
+/*.input-range .ui-slider-handle:hover,
+.input-range .ui-slider-handle:focus {
+  @handleHover: lighten(@orange, 30%);
+  .buttonBackground(@handleHover, spin(@handleHover, 20));
+}*/
+.input-range .ui-slider-handle.ui-state-active {
+  -webkit-box-shadow: inset 0 -9px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 -9px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 -9px 1px rgba(0, 0, 0, 0.1);
+}
+.input-range.ui-slider-disabled {
+  cursor: default;
+  opacity: 0.95;
+}
+.input-range.ui-slider-disabled .ui-slider-handle {
+  cursor: default;
+  background-position: -51px 0;
+}
+.input-range .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  display: block;
+  background: #b6e2fb;
+}
+.input-range .input-range .ui-slider-range,
+.polyfill-important .input-range .ui-slider-handle {
+  position: absolute !important;
+  display: block !important;
+  padding: 0 !important;
+}
+.input-range.ui-slider-horizontal .ui-slider-range {
+  top: 4px;
+  height: 1px;
+}
+.input-range.ui-slider-horizontal .ui-slider-range-min {
+  left: 0;
+}
+.input-range.ui-slider-horizontal .ui-slider-range-max {
+  right: 0;
+}
+/*------------------------------------*\
+    $DATEPICKER
+
+    Datepicker for Bootstrap
+  
+    Copyright 2012 Stefan Petre
+    Improvements by Andrew Rowls
+    Licensed under the Apache License v2.0
+    http://www.apache.org/licenses/LICENSE-2.0
+
+\*------------------------------------*/
+.input-date-datepicker-control {
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 14px;
+  left: 0;
+  margin-top: 1px;
+  padding: 8px;
+  overflow: visible;
+  top: 0;
+  zoom: 1;
+}
+.input-date-datepicker-control:before {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #CCC;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  content: '';
+  display: inline-block;
+  left: 6px;
+  position: absolute;
+  top: -7px;
+}
+.input-date-datepicker-control:after {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  content: '';
+  display: inline-block;
+  left: 7px;
+  position: absolute;
+  top: -6px;
+}
+.input-date-datepicker-control table {
+  margin: 0;
+}
+.input-date-datepicker-control td,
+.input-date-datepicker-control th {
+  height: 20px;
+  padding: 2px;
+  text-align: center;
+  width: 24px;
+}
+.input-date-datepicker-control td a,
+.input-date-datepicker-control th a {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.input-date-datepicker-control td a {
+  display: block;
+}
+.input-date-datepicker-control td a:hover {
+  background: #dddddd;
+  color: #555555;
+  text-decoration: none;
+}
+.input-date-datepicker-control td.ui-state-disabled a,
+.input-date-datepicker-control td.ui-state-disabled a:hover {
+  background: none;
+  color: #999999;
+  cursor: default;
+}
+.input-date-datepicker-control td.ui-datepicker-today a,
+.input-date-datepicker-control td.ui-datepicker-today a:hover,
+.input-date-datepicker-control td.ui-datepicker-today.ui-state-disabled a,
+.input-date-datepicker-control td.ui-datepicker-today.ui-state-disabled a:hover {
+  background: #ff6e06;
+  color: #FFF;
+}
+.input-date-datepicker-control td.ui-datepicker-current-day a,
+.input-date-datepicker-control td.ui-datepicker-current-day a:hover,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a:hover {
+  color: #ffffff;
+  background-color: #0758a5;
+  background-image: -moz-linear-gradient(top, #076da5, #0738a5);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#076da5), to(#0738a5));
+  background-image: -webkit-linear-gradient(top, #076da5, #0738a5);
+  background-image: -o-linear-gradient(top, #076da5, #0738a5);
+  background-image: linear-gradient(to bottom, #076da5, #0738a5);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff076da5', endColorstr='#ff0738a5', GradientType=0);
+  border-color: #0738a5 #0738a5 #041f5c;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #0738a5;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  color: #FFF;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.input-date-datepicker-control td.ui-datepicker-current-day a:hover,
+.input-date-datepicker-control td.ui-datepicker-current-day a:hover:hover,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a:hover,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a:hover:hover,
+.input-date-datepicker-control td.ui-datepicker-current-day a:focus,
+.input-date-datepicker-control td.ui-datepicker-current-day a:hover:focus,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a:focus,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a:hover:focus,
+.input-date-datepicker-control td.ui-datepicker-current-day a:active,
+.input-date-datepicker-control td.ui-datepicker-current-day a:hover:active,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a:active,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a:hover:active,
+.input-date-datepicker-control td.ui-datepicker-current-day a.active,
+.input-date-datepicker-control td.ui-datepicker-current-day a:hover.active,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a.active,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a:hover.active,
+.input-date-datepicker-control td.ui-datepicker-current-day a.disabled,
+.input-date-datepicker-control td.ui-datepicker-current-day a:hover.disabled,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a.disabled,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a:hover.disabled,
+.input-date-datepicker-control td.ui-datepicker-current-day a[disabled],
+.input-date-datepicker-control td.ui-datepicker-current-day a:hover[disabled],
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a[disabled],
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a:hover[disabled] {
+  color: #ffffff;
+  background-color: #0738a5;
+  *background-color: #06308d;
+}
+.input-date-datepicker-control td.ui-datepicker-current-day a:active,
+.input-date-datepicker-control td.ui-datepicker-current-day a:hover:active,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a:active,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a:hover:active,
+.input-date-datepicker-control td.ui-datepicker-current-day a.active,
+.input-date-datepicker-control td.ui-datepicker-current-day a:hover.active,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a.active,
+.input-date-datepicker-control td.ui-datepicker-current-day.ui-state-disabled a:hover.active {
+  background-color: #052874 \9;
+}
+.input-date-datepicker-control td.ui-datepicker-week-end a:hover {
+  background: #CCC;
+  color: #222222;
+}
+.input-date-datepicker-control thead {
+  background: #F5F5F5;
+}
+.input-date-datepicker-control thead span {
+  color: #222222;
+  display: block;
+  font-family: "ProximaNovaCond-Semibold", Verdana, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.input-date-datepicker-control .ui-datepicker-header {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  margin: 0 0 3px;
+  padding: 2px 0;
+  position: relative;
+}
+.input-date-datepicker-control .ui-datepicker-header select {
+  border: 1px solid #333;
+  padding: 1px 2px 2px;
+}
+.input-date-datepicker-control .ui-datepicker-header option {
+  padding-right: 8px;
+}
+.input-date-datepicker-control .ui-datepicker-header .ui-icon {
+  border: 6px solid transparent;
+  content: '';
+  cursor: pointer;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 7px;
+  width: 0;
+}
+.input-date-datepicker-control .ui-datepicker-header .ui-state-disabled .ui-icon {
+  cursor: default;
+}
+.input-date-datepicker-control .ui-datepicker-header .ui-icon-circle-triangle-w {
+  border-right: 6px solid #076da5;
+  left: 0;
+}
+.input-date-datepicker-control .ui-datepicker-header .ui-state-hover .ui-icon-circle-triangle-w {
+  border-right-color: #555555;
+}
+.input-date-datepicker-control .ui-datepicker-header .ui-icon-circle-triangle-e {
+  border-left: 6px solid #076da5;
+  right: 0;
+}
+.input-date-datepicker-control .ui-datepicker-header .ui-state-hover .ui-icon-circle-triangle-e {
+  border-left-color: #555555;
+}
+.input-date-datepicker-control .ui-datepicker-title {
+  margin: 0 20px;
+  text-align: center;
+}
+.input-date-datepicker-control .ui-datepicker-buttonpane {
+  margin: 4px 0 0;
+}
+.input-date-datepicker-control .ui-datepicker-cover {
+  position: absolute;
+  z-index: -1;
+  filter: mask();
+  top: -4px;
+  left: -4px;
+  width: 200px;
+  height: 200px;
+  /*must have*/
+
+}
+.polyfill-important .input-date-datepicker-control {
+  z-index: 999999999 !important;
+}
+/*------------------------------------*\
+    $DATALIST
+\*------------------------------------*/
+datalist {
+  display: none;
+}
+.datalist-polyfill {
+  position: absolute !important;
+  font-family: "Lucida Grande", "MS Shell Dlg", "Calibri", sans-serif;
+  font-size: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  display: none;
+  z-index: 999999999;
+}
+.datalist-polyfill.datalist-visible {
+  display: block;
+}
+.datalist-polyfill div {
+  margin: 0;
+  padding: 0;
+}
+.datalist-polyfill .datalist-box {
+  border: 1px solid #333;
+  max-height: 200px;
+  overflow: hidden;
+  overflow-x: hidden !important;
+  overflow-y: auto;
+}
+.datalist-polyfill ul,
+.datalist-polyfill li {
+  font-size: 100%;
+  list-style: none !important;
+}
+.datalist-polyfill ul {
+  position: static !important;
+  overflow: hidden;
+  margin: 0;
+  padding: 2px 0;
+  height: auto !important;
+  background-color: #fff;
+  color: #000;
+}
+.datalist-polyfill li {
+  margin: 1px 1px 1px 0;
+  padding: 2px 2px 2px 5px;
+  white-space: nowrap;
+  cursor: default;
+  zoom: 1;
+  overflow: hidden;
+}
+.datalist-polyfill .option-label {
+  display: inline-block;
+  float: left;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+.datalist-polyfill .option-value {
+  display: none;
+  float: right;
+  text-overflow: ellipsis;
+}
+.datalist-polyfill .hidden-item {
+  display: none !important;
+}
+.datalist-polyfill .active-item {
+  background-color: #39f;
+  color: #fff;
+  cursor: default;
+}
+/*------------------------------------*\
+    $VALIDITY
+\*------------------------------------*/
+.validity-alert-wrapper {
+  font-size: 13px;
+  padding: 0 6px 6px 6px;
+  position: absolute !important;
+  overflow: hidden;
+  z-index: 1000000000;
+}
+.validity-alert {
+  display: inline-block;
+  padding: 8px 0 0;
+}
+.validity-alert .va-arrow {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #9d261d;
+  border-top: none;
+  display: block;
+  font-size: 0;
+  height: 0;
+  left: 20px;
+  position: absolute;
+  top: 1px;
+  width: 0;
+  zoom: 1;
+}
+.validity-alert .va-box {
+  background: #9d261d;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  display: inline-block !important;
+  min-width: 60px;
+  padding: 8px 15px;
+  zoom: 1 !important;
+}
+html .validity-alert span.va-arrow,
+html .validity-alert .va-arrow .va-arrow-box {
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.polyfill-important .validity-alert span.va-arrow,
+.polyfill-important .validity-alert .va-arrow .va-arrow-box {
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+}
+* html .validity-alert .va-arrow {
+  display: none;
+}
+/*------------------------------------*\
+    $LOCAL-STORAGE
+\*------------------------------------*/
+#swflocalstorageshim-wrapper {
+  position: absolute;
+  top: -999px;
+  left: -9999px;
+  overflow: hidden;
+  width: 215px;
+  min-width: 215px !important;
+  z-index: 2147483647;
+}
+#swflocalstorageshim-wrapper .polyfill-exceeded-message {
+  margin: 0 0 5px;
+  padding: 5px;
+  background: #ffd;
+  color: #000;
+  font-size: 13px;
+}
+#swflocalstorageshim-wrapper object {
+  min-height: 138px !important;
+  min-width: 215px !important;
+}
+details {
+  overflow: hidden;
+}
+summary {
+  position: relative;
+}
+.closed-details-child {
+  display: none !important;
+}
+.details-open-indicator {
+  margin: -1px 0 0;
+  display: inline-block;
+  width: 16px;
+  height: 11px;
+  background: url(../images/forms/details-arrows.png) no-repeat 0 0;
+  vertical-align: middle;
+}
+.closed-details-summary .details-open-indicator {
+  background-position: 0 -20px;
+}
+.polyfill-important .details-open-indicator {
+  margin: -1px 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  display: inline-block !important;
+  width: 16px !important;
+  height: 11px !important;
+  background: url(../images/forms/details-arrows.png) no-repeat 0 0 !important;
+  vertical-align: middle !important;
+}
+.polyfill-important .closed-details-summary .details-open-indicator {
+  background-position: 0 -20px !important;
+}
+summary.summary-has-focus {
+  outline: 1px dotted #aaa;
+  outline-offset: -1px;
 }
 @media (min-width: 1200px) {
   body {

@@ -59,9 +59,49 @@ $(function() {
     return false;
   }).append('&nbsp;<span class="glyph-external" aria-hidden="true"></span>');
 
+
+  // Give the carousel pagination
+  var carousel = $('div.carousel');
+  carousel.carousel({
+    interval : 8000
+  }).on('click', '[data-to]', function(q){
+    $this = $(this);
+    var targetSlide = $this.attr('data-to')-1; // grabs the slide number
+    carousel.carousel(targetSlide).find('[data-to]').removeClass('active'); // gives the slide number to the carousel and removes class 'active' from the nav item
+    $this.addClass('active');
+    q.preventDefault(); // keep the hash call out of the URL
+  }).bind('slid', function(){
+    var slideIndex = $('div.carousel div.active').index('div.carousel div.item')+1; // gets current slide index
+    carousel.find('[data-to]').removeClass('active'); // remove .active from nav links
+    $('[data-to='+slideIndex+']').addClass('active'); // add .active to current nav link
+  });
+
+  // Add active class to accordion title
+  $('div.accordion').on('show', function (e) {
+    $(e.target).prev('div.accordion-heading').find('a.accordion-toggle').addClass('active');
+  }).on('hide', function (e) {
+    $(this).find('a.accordion-toggle').not($(e.target)).removeClass('active');
+  });
+
+  // Pull quotes from a paragraph and add them at the end as a blockquote
+  $('span.pullquote').each(function() {
+    var $parentParagraph = $(this).parent('p');
+    var $quoteContent = $(this).text();
+    var $quoteParagraph = $('<p>').text($quoteContent);
+    $parentParagraph.css('position', 'relative');
+    $('<blockquote class="pull-right">').html($quoteParagraph).prependTo($parentParagraph);
+  });
+
   // Activate Tooltips
   $('.tooltip-container').tooltip({
     selector: "[rel=tooltip]"
+  });
+
+  // Reveal hidden content on preview RV
+  $('a.toggle-reveal').on('click', function(){
+    var parent = $(this).closest('.preview-container');
+    $(parent).find('.reveal').toggleClass('hide');
+    return false;
   });
 
   // NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
