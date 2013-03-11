@@ -26,7 +26,7 @@
 
   <link rel="shortcut icon" href="assets/ico/favicon.png">
 </head>
-<body data-spy="scroll" data-target=".bs-docs-sidebar">
+<body class="regence-style" data-spy="scroll" data-target=".bs-docs-sidebar">
   
   <!--[if lt IE 7]>
       <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -42,7 +42,6 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="brand" href="./index.html">Regence Styleguide</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
             <li class="">
@@ -62,6 +61,22 @@
             </li>
             <li class="">
               <a href="./javascript.html">JavaScript</a>
+            </li>
+          </ul>
+          <ul class="nav pull-right">
+            <li class="dropdown">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <b class="regence-style">Regence</b>
+                <b class="asuris-style">Asuris</b> 
+                <b class="bridge-style">Bridgespan</b> Styleguide <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="nav-header">Styles</li>
+                <li class="nav-regence active"><a href="#">Regence</a></li>
+                <li class="nav-asuris"><a href="#">Asuris</a></li>
+                <li class="nav-bridge"><a href="#">Bridgespan</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Visit main site</a></li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -119,9 +134,8 @@
           <li class=""><a href="#download-bootstrap"><i class="icon-chevron-right"></i> Download</a></li>
           <li class=""><a href="#file-structure"><i class="icon-chevron-right"></i> File structure</a></li>
           <li class=""><a href="#contents"><i class="icon-chevron-right"></i> What's included</a></li>
-          <li class=""><a href="#liferay-theme"><i class="icon-chevron-right"></i> Liferay Theme</a></li>
-          <li class=""><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
-          <li class="active"><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li>
+          <li class=""><a href="#liferay-theme"><i class="icon-chevron-right"></i> Liferay theme</a></li>
+          <li class=""><a href="#liferay-layouts"><i class="icon-chevron-right"></i> Liferay layouts</a></li>
         </ul>
       </div>
       <div class="span9">
@@ -134,7 +148,7 @@
           <div class="page-header">
             <h1>1. Download</h1>
           </div>
-          <p class="lead">Before downloading, be sure to have Liferay Developer Studio, or a similar <abbr title="Integrated Development Environment" class="initialism">IDE</abbr>, and some working knowledge of HTML and CSS.</p>
+          <p class="lead">Before downloading, be sure to have Liferay Developer Studio, or a similar <abbr title="Integrated Development Environment" class="initialism">IDE</abbr>, and some working knowledge of <abbr title="Hypertext Markup Language" class="initialism">HTML</abbr> and <abbr title="Cascading Style Sheets" class="initialism">CSS</abbr>.</p>
           <p>Get the theme, layouts, plugins, and sample content. This is the easiest way to get started.</p>
           <p><a onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);" href="https://github.com/twitter/bootstrap/zipball/master" class="btn btn-large btn-primary">Download zip</a></p>
         </section>
@@ -184,10 +198,10 @@
           <p class="lead">This Liferay theme includes Twitter Bootstrap. The framework can be summarized with a handful of categories visible at the top of the page.</p>
 
           <h2>Docs sections</h2>
-          <h4><a href="layout.html">Scaffolding</a></h4>
-          <p>Global styles for the body to reset type and background, link styles, grid system, and two simple layouts.</p>
+          <h4><a href="layout.html">Layout</a></h4>
+          <p>Some basic rules of page structure, and how to use the Bootstrap grid system and Liferay layouts.</p>
           <h4><a href="base-css.html">Base CSS</a></h4>
-          <p>Styles for common HTML elements like typography, code, tables, forms, and buttons. Also includes <a href="http://glyphicons.com">Glyphicons</a>, a great little icon set.</p>
+          <p>Styles for common HTML elements like typography, code, tables, forms, and buttons. Also includes <a href="http://glyphicons.com">Glyphicons</a>, and font glyphs.</p>
           <h4><a href="components.html">Components</a></h4>
           <p>Basic styles for common interface components like tabs and pills, navbar, alerts, page headers, and more.</p>
           <h4><a href="javascript.html">JavaScript plugins</a></h4>
@@ -200,94 +214,89 @@
         ================================================== -->
         <section id="liferay-theme">
           <div class="page-header">
-            <h1>4. How to create a Liferay theme</h1>
+            <h1>1. How to create a Liferay theme</h1>
           </div>
           <p class="lead">With a brief intro into the contents out of the way, we can focus on how to integrate with Liferay. To do that, we'll have to create a Liferay theme.</p>
           <p>The process for creating a new theme is nearly identical to the one for making a portlet. You will need both a project name (without spaces) and a display name (which can have spaces). For example, the project name could be deep-blue, and the theme title Deep Blue. We will show two ways to accomplish this. First, we will demonstrate by using Liferay Developer Studio.</p>
+          <p><strong>Using Developer Studio:</strong> Go to File → New → Liferay Project</p>
+          <p>Next, go through the following steps to setup your new theme:</p>
+          <ol>
+            <li>Fill in <em>regence</em> for the Project name and <em>Regence</em> for the Display name</li>
+            <li>Select the Liferay Plugins SDK and Portal Runtime you’ve configured</li>
+            <li>Select <em>Theme</em> for your Plugin type</li>
+            <li>Click <em>Finish</em></li>
+          </ol>
+          <figure>
+            <img src="assets/img/docs/liferay-create-theme/01-themes-1.png" alt="01-themes-1.png">
+            <figcaption>
+              <strong>Figure 1.1 | </strong>Creating your theme plugin</cite>
+            </figcaption>
+          </figure>
+          <p>View the <a href="https://www.liferay.com/documentation/liferay-portal/6.1/user-guide">Liferay documentation</a> for other methods and options for creating a theme.</p>
+          <h2>Deploying the theme</h2>
+          <p>To deploy in Developer Studio: Click and drag your theme project onto your server.</p>
+          <figure>
+            <img src="assets/img/docs/liferay-create-theme/01-themes-2.png" alt="01-themes-2.png">
+            <figcaption>
+              <strong>Figure 1.2 | </strong>Deploy your theme to the server</cite>
+            </figcaption>
+          </figure>
+          <p>Upon deploying your plugin, your server will output messages indicating your plugin is read, registered, and now available for use.</p>
+<pre><code>Reading plugin package for regence-theme
+Registering themes for regence-theme
+1 theme for regence-theme is available for use
+</code></pre>
+          <p>You should get a BUILD SUCCESSFUL message, which means that your theme is now being deployed. If you switch to the terminal window running Liferay, and wait for a few seconds, you should see the message <em>1 theme for regence-theme is available for use</em>.</p>
+          <h2>Add custom theme files</h2>
+          <p>To add files in Developer Studio: Click and drag the custom theme files onto the docroot folder in your theme.</p>
+          <figure>
+            <img src="assets/img/docs/liferay-create-theme/01-themes-3.png" alt="01-themes-3.png">
+            <figcaption>
+              <strong>Figure 1.3 | </strong>Drag custom theme files to your theme</cite>
+            </figcaption>
+          </figure>
+          <p>Leave the dialog at default, Copy files and folders, and press <strong>OK</strong>.</p>
+          <figure>
+            <img src="assets/img/docs/liferay-create-theme/01-themes-4.png" alt="01-themes-4.png">
+            <figcaption>
+              <strong>Figure 1.4 | </strong>The copy files dialog</cite>
+            </figcaption>
+          </figure>
+          <p>After copying the files you'll need to redeploy your theme.</p>
+          <figure>
+            <img src="assets/img/docs/liferay-create-theme/01-themes-5.png" alt="01-themes-5.png">
+            <figcaption>
+              <strong>Figure 1.5 | </strong>Activate the theme from the Liferay admin</cite>
+            </figcaption>
+          </figure>
+          <p>Go to your web browser and login to the portal. Then hover over <strong>Manage</strong> at the top of the page, and click on <em>Page</em>. Directly underneath the words <strong>Manage Pages</strong> select the <em>Look and Feel</em> tab. Simply click on your theme to activate it.</p>
+          <figure>
+            <img src="assets/img/docs/liferay-create-theme/01-themes-6.png" alt="01-themes-6.png">
+            <figcaption>
+              <strong>Figure 1.6 | </strong>Activate the theme from the Liferay admin</cite>
+            </figcaption>
+          </figure>
         </section>
 
 
 
-        <!-- Examples
+        <!-- Creating a Liferay theme
         ================================================== -->
-        <section id="examples">
+        <section id="liferay-layouts">
           <div class="page-header">
-            <h1>5. Examples</h1>
+            <h1>2. How to install Liferay layouts</h1>
           </div>
-          <p class="lead">Move beyond the base template with a few example layouts. We encourage folks to iterate on these examples and not simply use them as an end result.</p>
-          <ul class="thumbnails bootstrap-examples">
-            <li class="span3">
-              <a href="examples/starter-template.html" class="thumbnail">
-                <img alt="" src="assets/img/examples/bootstrap-example-starter.png">
-              </a>
-              <h4>Starter template</h4>
-              <p>A barebones HTML document with all the Bootstrap CSS and JavaScript included.</p>
-            </li>
-            <li class="span3">
-              <a href="examples/hero.html" class="thumbnail">
-                <img alt="" src="assets/img/examples/bootstrap-example-marketing.png">
-              </a>
-              <h4>Basic marketing site</h4>
-              <p>Featuring a hero unit for a primary message and three supporting elements.</p>
-            </li>
-            <li class="span3">
-              <a href="examples/fluid.html" class="thumbnail">
-                <img alt="" src="assets/img/examples/bootstrap-example-fluid.png">
-              </a>
-              <h4>Fluid layout</h4>
-              <p>Uses our new responsive, fluid grid system to create a seamless liquid layout.</p>
-            </li>
-
-            <li class="span3">
-              <a href="examples/marketing-narrow.html" class="thumbnail">
-                <img alt="" src="assets/img/examples/bootstrap-example-marketing-narrow.png">
-              </a>
-              <h4>Narrow marketing</h4>
-              <p>Slim, lightweight marketing template for small projects or teams.</p>
-            </li>
-            <li class="span3">
-              <a href="examples/justified-nav.html" class="thumbnail">
-                <img alt="" src="assets/img/examples/bootstrap-example-justified-nav.png">
-              </a>
-              <h4>Justified nav</h4>
-              <p>Marketing page with equal-width navigation links in a modified navbar.</p>
-            </li>
-            <li class="span3">
-              <a href="examples/signin.html" class="thumbnail">
-                <img alt="" src="assets/img/examples/bootstrap-example-signin.png">
-              </a>
-              <h4>Sign in</h4>
-              <p>Barebones sign in form with custom, larger form controls and a flexible layout.</p>
-            </li>
-
-            <li class="span3">
-              <a href="examples/sticky-footer.html" class="thumbnail">
-                <img alt="" src="assets/img/examples/bootstrap-example-sticky-footer.png">
-              </a>
-              <h4>Sticky footer</h4>
-              <p>Pin a fixed-height footer to the bottom of the user's viewport.</p>
-            </li>
-            <li class="span3">
-              <a href="examples/carousel.html" class="thumbnail">
-                <img alt="" src="assets/img/examples/bootstrap-example-carousel.png">
-              </a>
-              <h4>Carousel jumbotron</h4>
-              <p>A more interactive riff on the basic marketing site featuring a prominent carousel.</p>
-            </li>
-          </ul>
+          <p class="lead">With the Bootstrapped based Regence theme installed we'll now need some Bootstrap based layouts. The next steps will show you how to install and activate these layouts.</p>
+          <p><strong>Using Developer Studio:</strong> Go to File → Import → Web → WAR file</p>
+          <p>Select browse and locate the four layouts from the custom theme download. They're located at <em>~/docroot/documents/layouts</em>.</p>
+          <figure>
+            <img src="assets/img/docs/liferay-create-theme/02-themes-1.png" alt="02-themes-1.png">
+            <figcaption>
+              <strong>Figure 1.3 | </strong>Install custom layouts</cite>
+            </figcaption>
+          </figure>
+          <p>After pressing the <strong>Finish</strong> button deploy the newly installed layout the same way as the theme. Once deployed you will be able to select this layout from your web browser. Hover over <strong>Manage</strong> at the top of the page, and click on <em>Page Layout</em>. If you installed <em>article-left-sidebar</em>, then you can select <em>Article Left Sidebar</em> and press <strong>Save</strong> to activate it.</p>
         </section>
-
-        <!-- Next
-        ================================================== -->
-        <section id="what-next">
-          <div class="page-header">
-            <h1>What next?</h1>
-          </div>
-          <p class="lead">Head to the docs for information, examples, and code snippets, or take the next leap and customize Bootstrap for any upcoming project.</p>
-          <a onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Visit docs']);" href="./scaffolding.html" class="btn btn-large btn-primary">Visit the Bootstrap docs</a>
-          <a onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Customize']);" style="margin-left: 5px;" href="./customize.html" class="btn btn-large">Customize Bootstrap</a>
-        </section>
-
       </div>
     </div>
 

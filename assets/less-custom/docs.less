@@ -37,28 +37,35 @@ h3 code {
   font-weight: normal;
 }
 
+/* Allow themes */
+.regence-style {
+
+  .asuris-style,
+  .bridge-style {
+    display: none;
+  }
+}
+.asuris-style {
+  
+  .regence-style,
+  .bridge-style {
+    display: none;
+  }
+}
+.bridge-style {
+  
+  .asuris-style,
+  .regence-style {
+    display: none;
+  }
+}
+
 
 /* Tweak navbar brand link to be super sleek
 -------------------------------------------------- */
 
 body > .navbar {
   font-size: 13px;
-
-  /* Change the docs' brand */
-  .brand {
-    padding: 8px 0;
-    margin-left: 20px;
-    float: right;
-    font-weight: bold;
-    color: #000;
-    text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
-    .transition(all .2s linear);
-
-    &:hover {
-      text-decoration: none;
-      text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
-    }
-  }
 }
 
 

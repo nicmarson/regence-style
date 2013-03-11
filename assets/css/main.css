@@ -558,16 +558,11 @@ ul.bulleted > li {
 .modal-footer {
   padding: 19px 15px 20px;
 }
-.form-verify-location .controls {
-  margin-left: 6em;
+figure {
+  display: inline-block;
 }
-.form-verify-location .control-label {
-  text-align: left;
-  width: 5em;
-}
-.form-verify-location .lead {
-  font-size: 18px;
-  line-height: 24px;
+figure figcaption {
+  padding: 5px 1px;
 }
 /* ==========================================================================
    Helper classes
@@ -822,6 +817,27 @@ ul.bulleted > li {
 .navbar-inverse .navbar-link:hover,
 .navbar-inverse .navbar-link:focus {
   color: #ffffff;
+}
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
+  background-color: #05466a;
+  color: #ffffff;
+}
+.navbar-inverse .nav li.dropdown > a:hover .caret,
+.navbar-inverse .nav li.dropdown > a:focus .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+.navbar-inverse .nav li.dropdown > .dropdown-toggle .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle .caret,
+.navbar-inverse .nav li.dropdown.active > .dropdown-toggle .caret,
+.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
 }
 .nav-articles {
   margin-top: 20px;
