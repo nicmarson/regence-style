@@ -1631,21 +1631,21 @@ $('#myCollapsible').on('hidden', function () {
                 </ol>
                 <div class="carousel-inner">
                   <div class="item active">
-                    <img src="assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
+                    <img src="assets/img/docs/javascript/bootstrap-mdo-sfmoma-01.jpg" alt="">
                     <div class="carousel-caption">
                       <h4>First Thumbnail label</h4>
                       <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="assets/img/bootstrap-mdo-sfmoma-02.jpg" alt="">
+                    <img src="assets/img/docs/javascript/bootstrap-mdo-sfmoma-02.jpg" alt="">
                     <div class="carousel-caption">
                       <h4>Second Thumbnail label</h4>
                       <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="assets/img/bootstrap-mdo-sfmoma-03.jpg" alt="">
+                    <img src="assets/img/docs/javascript/bootstrap-mdo-sfmoma-03.jpg" alt="">
                     <div class="carousel-caption">
                       <h4>Third Thumbnail label</h4>
                       <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -1938,7 +1938,8 @@ $('.carousel').carousel({
 <pre class="prettyprint linenums">&lt;fieldset&gt;
   &lt;legend&gt;outside of form but associated to the form using form-attribute&lt;/legend&gt;
   &lt;label for=&quot;email&quot;&gt;E-Mail + datalist: &lt;dfn title=&quot;required&quot;&gt;*&lt;/dfn&gt;&lt;/label&gt;
-  &lt;input list=&quot;datalist&quot; name=&quot;email&quot; required=&quot;required&quot; type=&quot;email&quot; id=&quot;email&quot; form=&quot;form&quot; class=&quot;form-ui-invalid&quot;&gt;
+  &lt;input list=&quot;datalist&quot; name=&quot;email&quot; required=&quot;required&quot; type=&quot;email&quot;
+   id=&quot;email&quot; form=&quot;form&quot; class=&quot;form-ui-invalid&quot;&gt;
   &lt;datalist id=&quot;datalist&quot;&gt;
     &lt;select&gt;
       &lt;option value=&quot;yourmail@gmail.com&quot;&gt;&lt;/option&gt;
@@ -1948,13 +1949,15 @@ $('.carousel').carousel({
     &lt;/select&gt;
   &lt;/datalist&gt;
   &lt;label for=&quot;date&quot;&gt;date: *&lt;/label&gt;
-  &lt;input class=&quot;datepicker&quot; name=&quot;date&quot; data-placeholder=&quot;year-month-day&quot; type=&quot;date&quot; id=&quot;date&quot; required=&quot;&quot; form=&quot;form&quot;&gt;
+  &lt;input class=&quot;datepicker&quot; name=&quot;date&quot; data-placeholder=&quot;year-month-day&quot;
+   type=&quot;date&quot; id=&quot;date&quot; required=&quot;&quot; form=&quot;form&quot;&gt;
   &lt;label for=&quot;fromDate&quot;&gt;from&lt;/label&gt;
   &lt;input type=&quot;date&quot; id=&quot;fromDate&quot; /&gt;
   &lt;label for=&quot;toDate&quot;&gt;to&lt;/label&gt;
   &lt;input type=&quot;date&quot; id=&quot;toDate&quot; /&gt;
   &lt;label for=&quot;checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; required=&quot;&quot; id=&quot;checkbox&quot; name=&quot;checkbox&quot; form=&quot;form&quot;&amp;gt; required checkbox*
+    &lt;input type=&quot;checkbox&quot; required=&quot;&quot; id=&quot;checkbox&quot; name=&quot;checkbox&quot;
+     form=&quot;form&quot;&gt; required checkbox*
   &lt;/label&gt;
   &lt;button class=&quot;btn&quot; form=&quot;form&quot; type=&quot;submit&quot;&gt;Send&lt;/button&gt;
 &lt;/fieldset&gt;</pre>
@@ -2017,7 +2020,8 @@ $('.carousel').carousel({
   &lt;label for=&quot;password&quot;&gt;password:&lt;/label&gt;
   &lt;input placeholder=&quot;password&quot; name=&quot;password&quot; type=&quot;password&quot; id=&quot;password&quot;&gt;
   &lt;label for=&quot;textarea&quot;&gt;textarea: * ([maxlength=&quot;6&quot;])&lt;/label&gt;
-  &lt;textarea placeholder=&quot;hello this is a textbox&quot; maxlength=&quot;6&quot; required=&quot;required&quot; name=&quot;textarea&quot; id=&quot;textarea&quot;&amp;gt;&lt;/textarea&gt;
+  &lt;textarea placeholder=&quot;hello this is a textbox&quot; maxlength=&quot;6&quot; required=&quot;required&quot;
+   name=&quot;textarea&quot; id=&quot;textarea&quot;&gt;&lt;/textarea&gt;
   &lt;label for=&quot;select&quot;&gt;select: *&lt;/label&gt;
   &lt;select required=&quot;required&quot; name=&quot;select&quot; id=&quot;select&quot;&gt;
     &lt;option value=&quot;&quot;&gt;Please choose&lt;/option&gt;
@@ -2034,7 +2038,7 @@ $('.carousel').carousel({
 &lt;fieldset class=&quot;mod&quot;&gt;
   &lt;legend&gt;Legend Short Labels &lt;dfn title=&quot;required&quot;&gt;*&lt;/dfn&gt;&lt;/legend&gt;
   &lt;label for=&quot;field6-1&quot;&gt; 
-    &lt;input type=&quot;radio&quot; id=&quot;field6-1&quot; name=&quot;radio-grp1-1&quot; required=&quot;&quot;&amp;gt;
+    &lt;input type=&quot;radio&quot; id=&quot;field6-1&quot; name=&quot;radio-grp1-1&quot; required=&quot;&quot;&gt;
     Radiooption 2
   &lt;/label&gt;
   &lt;label for=&quot;field7-1&quot;&gt;
